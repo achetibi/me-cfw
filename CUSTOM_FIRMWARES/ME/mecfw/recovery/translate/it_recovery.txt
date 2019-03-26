@@ -1,0 +1,114 @@
+Disabilitato
+Abilitato
+Default
+Giappone
+America
+Europa
+Corea
+Regno Unito
+Messico
+Australia/Nuova Zelanda
+Est
+Taiwan
+Russia
+Cina
+Debug Tipo I
+Debug Tipo II
+Normale
+OE isofs
+M33 driver
+Sony NP9660
+ME driver
+Inferno
+Connessione USB
+Configurazione
+Esegui
+Advanzate
+Velocità CPU
+Plugin
+Hack del registro
+Configurazione avanzata
+Configurazione batteria
+Formatta flash1 (reset impostazioni)
+Formatta flash2
+Seriale batteria
+Crea batteria Jigkick
+Crea batteria AutoBoot
+Crea Batteria Normale
+Esci
+Indietro
+USB attivato
+USB disattivato
+Formattazione
+correntemente
+Esegui OPNSSMP nella ISO
+Esegui PBOOT con la ISO
+Unlock Extra Memory
+Inferno Cache ISO
+Inferno Dimensione Cache
+Inferno Numero Cache
+Inferno Modalità Cache
+Plugin XMB
+Plugin GAME
+Plugin POPS
+Salta logo Sony
+Salta Gameboot
+Nascondi le icone corrotte
+Flash in sola lettura via USB
+Esegui
+Modalità UMD
+Nascondi indirizzo MAC
+Regione personalizzata
+Usa VshMenu
+XMB Usb Device
+Carica la batteria via USB
+Usa i colori del modello SLIM nella XMB
+Usa l'aggiornamento in rete M33
+Nascondi PIC0.PNG e PIC1.PNG
+Usa version.txt
+NoDRM Engine
+Nascondi directory del CFW ai giochi
+Velocizza l'accesso alla MS
+Disco UMD
+Memory Stick
+Velocità su XMB
+Velocità su UMD/ISO
+Assegnamento bottoni
+Attiva WMA
+Attiva Flash Player
+X torna indietro
+O torna indietro
+WMA già attivo.
+Attivazione WMA...
+Flash player già attivo.
+Attivazione Flash Player...
+Uscita dalla recovery
+Menu principale
+Ricarica
+Scrivendo
+SEMPRE
+MAI
+Sconosciuto
+Attendere
+Fine
+Fallito
+Salvo
+Usa la patch UmdVideo nella XMB
+Impostazioni
+Backup NetConfig
+Ripristina NetConfig
+Storage nascosto
+Altro
+Colore testo
+VSH Menu Back Color
+Verde
+Rosso
+Blu
+Grigio
+Rosa
+Viola
+Azzurro
+Arancione
+Giallo
+Bianco
+Nero

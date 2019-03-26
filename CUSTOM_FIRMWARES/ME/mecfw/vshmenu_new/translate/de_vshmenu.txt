@@ -1,0 +1,39 @@
+Deaktiviert
+Aktiviert
+Standard
+Keine
+Zurück
+UMD Disk
+Memory Stick
+Extra Speicher
+Normal
+OE isofs
+M33 Treiber
+Sony NP9660
+ME Treiber
+Inferno
+Rot
+Grün
+Blau
+Pink
+Lila
+Orange
+Gelb
+Schwarz
+Weiß
+XMB  Taktung    
+Game Taktung    
+USB Verbindung  
+UMD ISO Treiber 
+Video UMD Mount 
+VSH Menü Farbe  
+XMB  Plugins    
+GAME Plugins    
+POPS Plugins    
+Plugin Manager
+Recovery Menü 
+PSP Ausschalten
+Stand-By Modus
+PSP Neustarten
+VSH Resetten
+Beenden

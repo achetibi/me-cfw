@@ -1,0 +1,5 @@
+release:6.60:
+build:5455,0,3,1,0:builder@vsh-build6
+system:57716@release_660,0x06060010:
+vsh:p6616@release_660,v58533@release_660,20110727:
+target:1:WorldWide

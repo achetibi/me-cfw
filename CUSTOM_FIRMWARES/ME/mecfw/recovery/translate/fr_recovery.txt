@@ -1,0 +1,114 @@
+Désactivé
+Activé
+Par défaut
+Japon
+États-Unis
+Europe
+La Corée
+Royaume-Uni
+Mexique
+Australie
+Hong Kong
+Taïwan
+La Russie
+La Chine
+Mode Debug I
+Mode Debug II
+Normal
+OE isofs
+M33 driver
+Sony NP9660
+ME driver
+Inferno
+Activer la connexion USB
+Configuration générale
+Lancement de
+Configuration avancée
+Fréquence CPU
+Gestion des plugins
+Hacks du registre
+Configuration étendue
+Configuration de la batterie
+Formater flash1 et RAZ paramètres
+Formater flash2
+Numéro de série batterie
+Rendre la batterie Pandora
+Rendre la batterie Autoboot
+Rendre la batterie Normale
+Quitter
+Revenir au menu supérieur
+Connexion USB activée
+Connexion USB désactivée
+Formatage
+État
+Exécuter l'OPNSSMP des ISOs
+Exécuter le PBOOT des ISOs
+Débloquer l'Extra Memory
+Inferno Utiliser Cache ISO
+Inferno Taille du cache
+Inferno Nombre du cache
+Inferno Politique du cache
+Plugins  XMB
+Plugins Jeux
+Plugins Pops
+Désactiver le logo SCE
+Désactiver le GameBoot
+Cacher les icônes corrompues
+Protéger les Flashs
+Boot
+Driver UMD/ISO
+Masquer l'adresse MAC
+Fausser la région
+Utiliser le menu VSH
+Périphérique USB du XMB
+Charger la batterie par USB
+Utiliser les couleurs de PSP Slim
+Utiliser la mise à jour ME
+Cacher PIC0.PNG et PIC1.PNG
+Utiliser version.txt
+Moteur NoDRM
+Masquer les dossiers du CFW
+Accélérer la Memory Stick
+Disque UMD
+Memory Stick
+Fréquence CPU dans le XMB
+Fréquence CPU dans les UMD/ISO
+Assignation des touches X/O
+Activer le codec WMA
+Activer Flash Player 
+O = valider
+X = valider
+WMA est déjà activé.
+Activation de WMA...
+Flash Player est déjà activé.
+Activation de Flash Player...
+Sortie du recovery
+Menu principal
+Rechargement
+Écriture
+TOUJOURS
+JAMAIS
+Inconnu
+Patientez SVP
+Fait
+Échec
+Sauvegarde
+Activer le patch UMD Vidéo XMB
+En cours
+Sauvegarder la configuration Ethernet
+Restaurer la configuration Ethernet
+Stockage caché
+Complément
+Couleur de texte
+Couleur du Menu VSH
+Vert
+Rouge
+Bleu
+Gris
+Rose
+Violet
+Turquoise
+Orange
+Jaune
+Blanc
+Noir

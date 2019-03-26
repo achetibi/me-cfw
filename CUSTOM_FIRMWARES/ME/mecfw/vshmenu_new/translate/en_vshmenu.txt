@@ -1,0 +1,39 @@
+Disabled
+Enabled
+Default
+NONE
+Back
+UMD Disc
+Memory Stick
+Hidden Storage
+Normal
+OE isofs
+M33 driver
+Sony NP9660
+ME driver
+Inferno
+Red
+Green
+Blue
+Pink
+Purple
+Orange
+Yellow
+Black
+White
+CPU CLOCK XMB  
+CPU CLOCK GAME 
+USB DEVICE     
+UMD ISO MODE   
+ISO VIDEO MOUNT
+BACK COLOR     
+XMB  PLUGINS   
+GAME PLUGINS   
+POPS PLUGINS   
+PLUGINS MANAGER
+ENTER RECOVERY 
+SHUTDOWN DEVICE
+SUSPEND DEVICE 
+RESET DEVICE
+RESET VSH
+EXIT

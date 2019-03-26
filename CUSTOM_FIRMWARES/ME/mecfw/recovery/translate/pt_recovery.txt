@@ -1,0 +1,114 @@
+Desativado
+Ativado
+Restaurar
+Japão
+América
+Europa
+Coréia
+Reino Unido
+México
+Austrália/Nova Zelândia
+Leste
+Taiwan
+Rússia
+China
+Debug Tipo I
+Debug Tipo II
+Normal
+OE isofs
+Driver M33
+Sony NP9660
+Driver ME
+Inferno
+Ligar USB
+Configuração
+Iniciar programa em
+Avançado
+Velocidade da CPU
+Plugins
+Registrar hacks
+Configurações Avançadas
+Configuraçõeas da Bateria
+Formatar flash1 e resetar configurações
+Formatar flash2
+Serial da Bateria
+Criar Bateria Jigkick
+Criar Bateria AutoBoot
+Criar Bateria Normal
+Sair
+Voltar
+USB Ativada
+USB desativada
+Formatando
+Atualmente
+Executar OPNSSMP na ISO
+Executar PBOOT com a ISO
+Unlock Extra Memory
+Cache da ISO Inferno
+Tamanho do cache da Inferno
+Número do cache da Inferno
+Política do cache da Inferno
+Plugins da XMB
+Plugins do JOGO
+Plugins do POPS
+Cortar logotipo da Sony
+Cortar Boot do jogo
+Esconder ícones corrompidos
+Proteger Flash no Usb
+Iniciar automáticamente em
+Modo UMD
+Esconder Endereço Mac
+Região falsa
+Usar Menu VSH
+Dispoditivo USB da XMB
+Carregar bateria quando o USB estiver Plugado
+Usar cores Slim na XMB
+Usar atualizações da interner na M33
+Esconder PIC0.PNG e PIC1.PNG no menu do jogo
+Usar version.txt
+Sem engine DRM
+Esconder diretórios CFW do jogo
+Aumentar acessos do MS
+Discos UMD
+Memory Stick
+Velocidade no XMB
+Velocidade na UMD/ISO
+Botões de assinaturas
+Ativar WMA
+Ativar Flash Player
+O é enter
+X é enter
+WMA já foi ativado.
+Ativando WMA...
+Flash player já foi ativado.
+Ativando Flash Player...
+Saindo do recovery
+Menu Principal
+Recarregando
+Escrevendo
+SEMPRE
+NUNCA
+Desconhecido
+Por favor aguardar
+Feito
+Falhou
+Salvando
+Usar patch do UmdVideo na XMB
+Configurações
+Backup das configurações da Net
+Restaurar configurações da Net
+Armazenamento Escondido
+Miscelânea
+Cor do Texto
+VSH Menu Back Color
+Verde
+Vermelho
+Azul
+Cinza
+Rosa
+Roxo
+Turquesa
+Laranja
+Amarelo
+Branco
+Preto

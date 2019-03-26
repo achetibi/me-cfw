@@ -1,0 +1,29 @@
+--- Feature ---
+- Support Unsigned Homebrew.
+- Support Extra module (Plugins).
+- Support ISO mount with M33 driver , NP9660 driver , OE driver , Normal driver, ME driver and Inferno driver.
+- Support UMD video.
+- Support converted PSX(PS1) game and custom DOCUMENT.DAT.
+- Unlock max display brightness level without AC adapter.
+- Unlock Extra Memory for ISO/Homebrew (02g+).
+- Unlock Slim color in XMB. (Need to prepare bmp file).
+- Support USB battery charging.
+- Support CPU speed control.
+- Support hide PIC0.PNG and PIC1.PNG option.
+- Support Flash0/1/2/3/UMD mount with USB.
+- Support fake region.
+- Support Battery EEPROM option in recovery menu.
+- Support to load Unsigned module.
+- Support to load packed (with Dark_AleX's psp-packer) module.
+- Support NoDRM Engine.
+- Support Hide Custom Firmware Dirs.
+- Support ISO/CSO/DAX format.
+
+--- VshMenu ---
+Press SELECT to display VshMenu in XMB.
+This menu won't displayed while useing Browser, Skype, Camera, Remoreplay, 1seg and PsnStore.
+Press L + R + SELECT to force open VshMenu.
+
+New:
+If you are displaying VshMenu, press L + R + START to enter edit mode.
+You can customize VshMenu :)

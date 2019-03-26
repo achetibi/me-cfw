@@ -1,0 +1,114 @@
+Disabled
+Enabled
+Default
+Japan
+America
+Europe
+Korea
+United Kingdom
+Mexico
+Australia/New Zealand
+East
+Taiwan
+Russia
+China
+Debug Type I
+Debug Type II
+Normal -UMD required-
+OE isofs -NO UMD-
+M33 driver -NO UMD-
+Sony NP9660 -NO UMD-
+ME driver -NO UMD-
+Inferno -NO UMD-
+Toggle USB
+Configuration
+Run program at
+Advanced
+CPU Speed
+Plugins
+Registry hacks
+Advanced configuration
+Battery configuration
+Format flash1 and reset settings
+Format flash2
+Battery Serial
+Make Jigkick Battery
+Make AutoBoot Battery
+Make Normal Battery
+Exit
+Back
+USB enabled
+USB disabled
+Formatting
+currently
+Execute OPNSSMP in ISO
+Execute PBOOT with ISO
+Unlock Extra Memory
+Inferno ISO Cache
+Inferno Cache Size
+Inferno Cache Number
+Inferno Cache Policy
+XMB  plugins
+GAME plugins
+POPS plugins
+Skip Sony logo
+Skip Gameboot
+Hide corrupt icons
+Protect Flash in Usb Mount
+Autorun program at
+UMD Mode
+Hide Mac Address
+Fake region
+Use VshMenu
+XMB Usb Device
+Charge battery when USB cable plugged
+Use Slim Color in XMB
+Use M33 network update
+Hide PIC0.PNG and PIC1.PNG in game menu
+Use version.txt
+NoDRM Engine
+Hide CFW Dirs from game
+Speed up MS access
+UMD Disc
+Memory Stick
+Speed in XMB
+Speed in UMD/ISO
+Button assign
+Activate WMA
+Activate Flash Player
+O is enter
+X is enter
+WMA was already activated.
+Activating WMA...
+Flash player was already activated.
+Activating Flash Player...
+Exiting recovery
+Main menu
+Reloading
+Writing
+ALWAYS
+NEVER
+Unknown
+Please wait
+Done
+Failed
+Saving
+Use UmdVideo Patch in XMB
+Setting
+Backup NetConfig
+Restore NetConfig
+Hidden Storage
+Misc
+Recovery Text Color
+VSH Menu Back Color
+Green
+Red
+Blue
+Grey
+Pink
+Purple
+Turquoise
+Orange
+Yellow
+White
+Black

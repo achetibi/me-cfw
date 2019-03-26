@@ -1,0 +1,114 @@
+Disattivo
+Attivo
+Default
+Giappone
+America
+Europa
+Corea
+Regno Unito
+Messico
+Australia/Nuova Zelanda
+Medio oriente
+Taiwan
+Russia
+Cina
+Debug Tipo I
+Debug Tipo II
+Normale -UMD richiesto-
+OE isofs -NO UMD-
+M33 driver -NO UMD-
+Sony NP9660 -NO UMD-
+ME driver -NO UMD-
+Inferno -NO UMD-
+Connetti USB
+Configurazione
+Avvia programma in
+Avanzate
+Velocita' CPU
+Plugin
+Hack del Registro
+Configurazione avanzata
+Configurazione della batteria
+Formatta flash1 e ripristina impostazioni
+Formatta flash2
+Seriale Batteria
+Crea Batteria Jigkick
+Crea Batteria AutoBoot
+Crea Batteria Normale
+Esci
+Indietro
+USB abilitato
+USB disabilitato
+Formattando
+ora
+Esegui OPNSSMP
+Esegui PBOOT.PBP nelle ISO
+Unlock Extra Memory
+Inferno ISO Cache
+Inferno Cache Size
+Inferno Cache Number
+Inferno Cache Policy
+Plugin XMB
+Plugin GAME
+Plugin POPS
+Salta logo Sony
+Salta Gameboot
+Nascondi icone dannegiate
+Proteggi Flash (sola lettura)
+Auto avvia al boot
+Modalita' UMD
+Nascondi Indirizzo Mac
+Cambia Regione
+Usa VSHmenu'
+Dispositivo USB in XMB
+Carica tramite USB
+Usa Colori della Slim sulla Fat
+Aggiornamento Internet Custom
+Nascondi PIC0.PNG e PIC1.PNG
+Usa version.txt in seplugins
+NoDRM Engine
+Hide CFW Dirs from game
+Velocizza accesso alla MS
+Disco UMD
+Memory Stick
+Velocita' in XMB
+Velocita' in UMD/ISO
+Assegnazione pulsanti
+Attiva WMA
+Attiva Flash Player
+O e' invio
+X e' invio
+WMA e' gia' attivato.
+Attivando WMA
+Flash player e' gia' attivato.
+Attivando Flash Player
+Uscendo dalla Recovery ByeBye
+Menu' Principale
+Leggo
+Scrivo
+SEMPRE
+MAI
+Sconosciuto
+Attendere prego
+Fatto
+Fallito
+Salvataggio in corso
+Attiva patch per videoUMD ISO
+Impostando
+Salva backup impostazioni di rete
+Carica impostazioni di rete salvate
+Storage nascosto
+Altro
+Colore testo
+VSH Menu Back Color
+Verde
+Rosso
+Blu
+Grigio
+Rosa
+Viola
+Azzurro
+Arancione
+Giallo
+Bianco
+Nero

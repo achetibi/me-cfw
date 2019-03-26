@@ -1,0 +1,36 @@
+
+PSP_BEGIN_EXPORTS
+# syslib is a psynonym for the single mandatory export.
+PSP_EXPORT_START(syslib, 0, 0x8000)
+PSP_EXPORT_FUNC_HASH(module_start)
+PSP_EXPORT_VAR_HASH(module_info)
+PSP_EXPORT_VAR_HASH(module_sdk_version)
+PSP_EXPORT_END
+
+PSP_EXPORT_START(horoscope_driver, 0, 0x0001)
+PSP_EXPORT_FUNC_HASH(sctrlHoroscopeHookLoadModuleMs2)
+PSP_EXPORT_END
+
+PSP_EXPORT_START(horoscope, 0x0011, 0x4001)
+PSP_EXPORT_FUNC(sceIoOpenPatched)
+PSP_EXPORT_FUNC(sceIoOpenAsyncPatched)
+PSP_EXPORT_FUNC(sceIoClosePatched)
+PSP_EXPORT_FUNC(sceIoCloseAsyncPatched)
+PSP_EXPORT_FUNC(sceIoIoctlPatched)
+PSP_EXPORT_FUNC(sceIoIoctlAsyncPatched)
+PSP_EXPORT_FUNC(sceIoWaitAsyncCBPatched)
+PSP_EXPORT_FUNC(sceIoPollAsyncPatched)
+PSP_EXPORT_FUNC(sceNpDrmRenameCheckPatched)
+PSP_EXPORT_FUNC(sceNpDrmEdataSetupKeyPatched)
+PSP_EXPORT_FUNC(sceNpDrmEdataGetDataSizePatched)
+PSP_EXPORT_FUNC(sceKernelLoadModuleNpDrmPatched)
+PSP_EXPORT_FUNC(sceUtilityLoadModulePatch)
+PSP_EXPORT_FUNC(sceUtilityUnloadModulePatch)
+PSP_EXPORT_FUNC(sceKernelLoadModuleUserPatched)
+PSP_EXPORT_FUNC(sceIoDreadPatched)
+PSP_EXPORT_FUNC(SysMemUserForUser_1B4217BC_Patched)
+PSP_EXPORT_FUNC(scePower_469989AD_Patched)
+PSP_EXPORT_FUNC(scePower_A85880D0_Patched)
+PSP_EXPORT_END
+
+PSP_END_EXPORTS

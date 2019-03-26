@@ -1,0 +1,114 @@
+Geblokkeerd
+Geactiveerd
+Standaard
+Japan
+Amerika
+Europa
+Korea
+Verenigd koninkrijk
+Mexico
+Australië/Nieuw Zeeland
+Oost
+Taiwan
+Rusland
+China
+Debug Type I
+Debug Type II
+Standaard
+OE isofs
+M33 stuurprogramma
+Sony NP9660
+ME stuurprogramma
+Inferno
+Schakel USB
+Configuratie
+Start programma op
+Geavanceerd
+CPU snelheid
+Plugins
+Register hacks
+Geavanceerde configuratie
+Batterij configuratie
+Formateer flash1 en herstel instellingen
+Formateer flash2
+Batterij seriecode
+Maak Jigkick batterij
+Maak AutoBoot batterij
+Maak Normale batterij
+Sluit af
+Terug
+USB geactiveerd
+USB uitgeschakeld 
+Opmaak
+Huidige
+Voer OPNSSMP uit in ISO
+Voor PBOOT uit met ISO
+Unlock Extra Memory
+Inferno ISO Cache
+Inferno Cache Groote
+Inferno Cache Nummer
+Inferno Cache Beleid
+XMB  plugins
+GAME plugins
+POPS plugins
+Sla het Sony logo over
+Sla Gameboot over
+Verberg kapotte apps
+Bescherm Flash tijdens USB koppeling
+Start automatisch programma’s op
+UMD Modus
+Verberg Mac adres
+Andere regio
+Gebruik VshMenu
+XMB Usb apparaat
+Laad batterij op met USB kabel
+Gebruik PSP slim kleur in XMB
+Gebruik de M33 network update
+Verberg PIC0.PNG en PIC1.PNG in het spel menu
+Gebruik version.txt
+NoDRM Engine
+Verberg CFW mappen voor games
+Versnel MS Toegang
+UMD Disk
+Geheugen kaart(MS)
+Snelheid van XMB
+Snelheid van UMD/ISO
+Knoppen configuratie
+Zet WMA aan
+Zet Flash Player aan
+O is enter
+X is enter
+WMA is al geactiveerd.
+Bezig WMA te activeren...
+Flash player is al geactiveerd.
+Bezig Flash Player te activeren...
+Recovery menu aan het verlaten
+Hoofdmenu
+Herladen
+Schrijven
+ALTIJD
+NOOIT
+Onbekend
+Moment geduld
+Klaar
+Mislukt
+Opslaan
+Gebruik UmdVideo Patch in XMB
+Configuratie
+Backup NetConfig
+Herstel NetConfig
+Verborgen opslag
+Diverse
+Tekst kleur
+VSH Menu Back Color
+Groen
+Rood
+Blauw
+Grijs
+Roze
+Paars
+Turkoois 
+Oranje
+Geel
+Wit
+Zwart

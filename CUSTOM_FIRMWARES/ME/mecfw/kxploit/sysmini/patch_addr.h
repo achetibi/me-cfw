@@ -1,0 +1,21 @@
+#if _PSP_FW_VERSION == 620
+u32 module_sdk_version = 0x06020010;
+int MemlmdPatchAddr_01g[] = { 0x00000F10, 0x000010D8, 0x0000112C, 0x00000134, 0x00000E10, 0x00000E74 };
+int MemlmdPatchAddr_02g[] = { 0x00000FA8, 0x00001170, 0x000011C4, 0x00000134, 0x00000EA8, 0x00000F0C };
+static const int LoadcoreMemlmdFixAddr[] = { 0x0000835C, 0x00006914, 0x00006944, 0x000069DC, 0x00008374, 0x000041A4, 0x000068F0 };
+
+#elif  _PSP_FW_VERSION == 639
+u32 module_sdk_version = 0x06030910;
+int MemlmdPatchAddr_01g[] = { 0x00000F88, 0x00001150, 0x000011A4, 0x00000134, 0x00000E88, 0x00000EEC };
+int MemlmdPatchAddr_02g[] = { 0x00001078, 0x00001240, 0x00001294, 0x00000134, 0x00000F78, 0x00000FDC };
+static const int LoadcoreMemlmdFixAddr[] = { 0x00007AE8, 0x00005CC8, 0x00005CF8, 0x00005D90, 0x00007B08, 0x000041A4, 0x00005CA4 };
+
+#elif _PSP_FW_VERSION == 660
+u32 module_sdk_version = 0x06060010;
+int MemlmdPatchAddr_01g[] = { 0x00001070, 0x00001238, 0x0000128C, 0x0000020C, 0x00000F70, 0x00000FD4 };
+int MemlmdPatchAddr_02g[] = { 0x000010F8, 0x000012C0, 0x00001314, 0x0000020C, 0x00000FF8, 0x0000105C };
+static const int LoadcoreMemlmdFixAddr[] = { 0x00007824, 0x00005994, 0x000059C4, 0x00005A5C, 0x0000783C, 0x00003E70, 0x00005970 };
+
+#else
+#error patch_addr.h
+#endif

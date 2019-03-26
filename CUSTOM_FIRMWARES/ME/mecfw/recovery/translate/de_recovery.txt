@@ -1,0 +1,114 @@
+Deaktiviert
+Aktiviert
+Standard
+Japan
+Amerika
+Europa
+Korea
+Großbritannien
+Mexiko
+Australien
+Hongkong
+Taiwan
+Russland
+China
+Fehlerbehebungsmodus 1
+Fehlerbehebungsmodus 2
+Normal -UMD notwendig-
+OE isofs
+M33 Treiber
+Sony NP9660
+ME Treiber
+Inferno
+USB Verbindung
+Einstellungen
+Programm starten
+Erweitert
+CPU-Taktung
+Plugins
+Interne Hacks
+Erweiterte Einstellungen
+Batterie Einstellungen
+Formatiere flash1 und setze Einstellungen zurück
+Formatiere flash2 und setze Einstellungen zurück
+Batterie Serial
+Pandora Akku erstellen
+AutoBoot Akku erstellen
+Normalen Akku erstellen
+Beenden
+Zurück
+USB Verbunden
+USB Getrennt
+Formatierung
+Momentan
+OPNSSMP.BIN ausführen
+PBOOT.PBP ausführen
+Unlock Extra Memory
+Inferno ISO Cache
+Inferno Cache Größe
+Inferno Cache Nummer
+Inferno Cache Regelsatz
+XMB  Plugins
+GAME Plugins
+POPS Plugins
+PSP Start-Logo überspringen
+Gameboot überspringen
+Verstecke defekte Daten
+Schütze Flash in USB
+Autostart
+UMD-Modus
+Mac Addresse verstecken
+Fälsche Regionscode
+Vsh-Menü benutzen
+XMB USB-Modus
+Akku Aufladung durch USB
+Slim Farben im XMB
+ME Netzwerk-Update benutzen
+Verstecke PIC0 und PIC1
+Nutze version.txt
+NoDRM Engine
+Versteckte CFW Pfade in GAME
+Beschleunige MS-Zugriff
+UMD Disk
+Memory Stick
+CPU in XMB
+CPU in UMD/ISO
+Tastenbelegung einstellen
+WMA aktivieren
+Flash Player aktivieren
+O ist Bestätigen
+X ist Bestätigen
+WMA wurde bereits aktiviert.
+Aktiviere WMA...
+Flash Player wurde bereits aktiviert.
+Aktiviere Flash Player...
+ME Recovery Menü wird beendet...
+Hauptmenü
+Neuladen
+Schreibe
+Immer
+Nie
+Unbekannt
+Bitte warten
+Erledigt
+Fehlgeschlagen
+Speichere
+Benutze UmdVideo Patch im XMB
+Bitte Warten
+Netzwerk-Einstellungen sichern
+Netzwerk-Einstellungen wiederherstellen
+Extra Speicher
+Sonstiges
+Recovery Menü Farbe
+VSH Menu Back Color
+Grün
+Rot
+Blau
+Grau
+Pink
+Lila
+Türkis
+Orange
+Gelb
+Weiß
+Schwarz

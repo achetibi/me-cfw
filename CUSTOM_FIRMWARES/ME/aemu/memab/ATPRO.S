@@ -1,0 +1,15 @@
+	.set noreorder
+
+#include "pspimport.s"
+
+	IMPORT_START "ATPRO",0x40090000
+	IMPORT_FUNC  "ATPRO",0x9130DBB1,hexdump
+	IMPORT_FUNC  "ATPRO",0x3DF7F7D8,printk
+	IMPORT_FUNC  "ATPRO",0x9590B88F,printk_sync
+	IMPORT_FUNC  "ATPRO",0xF89B9E56,patch_netconf_utility
+	IMPORT_FUNC  "ATPRO",0x477D0874,registerKeyPhrase
+	IMPORT_FUNC  "ATPRO",0x4F116C7A,addChatLog
+	IMPORT_FUNC  "ATPRO",0x8442C803,popFromOutbox
+	IMPORT_FUNC  "ATPRO",0xA6110A55,setConnectionStatus
+	IMPORT_FUNC  "ATPRO",0x52B3E65C,setReceptionPercentage
+	IMPORT_FUNC  "ATPRO",0x5E3714C6,setUserCount

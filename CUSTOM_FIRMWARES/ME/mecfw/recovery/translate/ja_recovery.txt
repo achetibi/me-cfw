@@ -1,0 +1,114 @@
+Ñº³
+Õ³º³
+ÃÞÌ«ÙÄ
+Japan
+America
+Europe
+Korea
+United Kingdom
+Mexico
+Australia/New Zealand
+East
+Taiwan
+Russia
+China
+Debug Type I
+Debug Type II
+Normal
+OE isofs
+M33 driver
+Sony NP9660
+ME driver
+Inferno
+USB ¾Â¿Þ¸
+¾¯Ã²
+ÌßÛ¸Þ×Ñ¦¼Þ¯º³/
+º³ÄÞ Å ¾¯Ã²
+CPU ½Ëß°ÄÞ
+Ìß×¸Þ²Ý
+Ú¼Þ½ÄØ ÍÝº³
+º³ÄÞ Å ¾¯Ã²
+ÊÞ¯ÃØ°µÌß¼®Ý
+Format flash1 and reset settings
+Format flash2
+ÊÞ¯ÃØ°¼Ø±Ù
+Jigkick Battery »¸¾²
+AutoBoot Battery »¸¾²
+Normal Battery »¸¾²
+¼­³Ø®³
+ÓÄÞÙ
+USB Õ³º³
+USB Ñº³
+Ì«°Ï¯ÄÁ­³
+¹ÞÝ»Þ²
+OPNSSMP ¼Þ¯º³
+PBOOT ¼Þ¯º³
+Unlock Extra Memory
+Inferno ISO Cache
+Inferno Cache Size
+Inferno Cache Number
+Inferno Cache Policy
+XMB  Ìß×¸Þ²Ý
+GAME Ìß×¸Þ²Ý
+POPS Ìß×¸Þ²Ý
+SCEÛºÞ ½·¯Ìß
+Skip Gameboot
+Ê¿ÝÌ«ÙÀÞ É ËË®³¼Þ
+Mount Flash as Read-only
+¼ÞÄÞ³¼Þ¯º³ /
+UMD Ó°ÄÞ
+Mac ±ÄÞÚ½ ËË®³¼Þ
+Ø°¼Þ®Ý·Þ¿³
+VshMenu ¦ Â¶³
+XMB Usb ÃÞÊÞ²½
+USB ¼Þ­³ÃÞÝ
+XMB ¶¸Á®³ ¶×°
+È¯ÄÜ°¸±¯ÌßÃÞ°Ä
+PIC0 & PIC1¦Ë®³¼Þ¼Å²
+version.txt ¼Ö³
+NoDRM Engine
+Hide CFW Dirs from game
+MS ½Ëß°ÄÞ±¯Ìß
+UMD Disc
+Memory Stick
+XMB ÄÞ³»¼­³Ê½³
+GAMEÄÞ³»¼­³Ê½³
+¹¯Ã²·° ·Ø¶´
+WMA Õ³º³¶
+Flash Player Õ³º³¶
+O ÃÞ ¹¯Ã²
+X ÃÞ ¹¯Ã²
+WMA Ê ½ÃÞÆ Õ³º³Æ Å¯Ã²Ï½
+WMA ¾¯Ã²Á­³ ...
+Flash player Ê ½ÃÞÆ Õ³º³Æ Å¯Ã²Ï½
+Flash Player ¾¯Ã²Á­³ ...
+Ø¶ÊÞØ° ¼­³Ø®³Á­³
+Ò²Ý ÒÆ­°
+ÖÐºÐÁ­³
+¶·ºÐÁ­³
+ALWAYS
+NEVER
+ÌÒ²
+µÏÁ¸ÀÞ»²
+¾²º³
+¼¯Êß²
+Î¿ÞÝÁ­³
+Umd Vide Êß¯Á
+¾¯Ã²Á­³
+È¯ÄÜ°¸¾¯Ã² ÊÞ¯¸±¯Ìß
+È¯ÄÜ°¸¾¯Ã² Ì¸¹ÞÝ
+¼½ÃÑ ½ÄÚ°¼Þ
+¿ÉÀ
+Ã·½Ä¶×°
+VSH Menu Back Color
+Green
+Red
+Blue
+Grey
+Pink
+Purple
+Turquoise
+Orange
+Yellow
+White
+Black

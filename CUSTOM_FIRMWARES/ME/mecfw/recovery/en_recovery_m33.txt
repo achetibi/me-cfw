@@ -1,0 +1,71 @@
+Disabled
+Enabled
+Default
+Japan
+America
+Europe
+Korea
+United Kingdom
+Mexico
+Australia/New Zealand
+East
+Taiwan
+Russia
+China
+Debug Type I
+Debug Type II
+Normal -UMD required-
+OE isofs legacy -NO UMD-
+M33 driver -NO UMD-
+Sony NP9660 -NO UMD-
+Toggle USB
+Configuration
+Advanced
+Advanced configuration
+Run program at
+CPU Speed
+Plugins
+Registry hacks
+Exit
+Back
+Activate WMA
+Activate Flash Player
+USB enabled
+USB disabled
+Format flash1 and reset settings
+Formatting
+currently
+Plain modules in UMD/ISO
+Execute BOOT.BIN in UMD/ISO
+Skip Sony logo
+Hide corrupt icons
+Game folder homebrew
+Autorun program at
+UMD Mode
+Fake region
+Use VshMenu
+XMB Usb Device
+UMD Disc
+Use M33 network update
+Hide PIC0.PNG and PIC1.PNG in game menu
+Charge battery when USB cable plugged
+Speed in XMB
+Speed in UMD/ISO
+Button assign
+O is enter
+X is enter
+WMA was already activated.
+Activating WMA...
+Flash player was already activated.
+Activating Flash Player...
+Exiting recovery
+Main menu
+1.50 Kernel
+5.XX Kernel
+XMB  plugins
+GAME plugins
+POPS plugins
+Use version.txt
+Speed up MS access
+ALWAYS
+NEVER

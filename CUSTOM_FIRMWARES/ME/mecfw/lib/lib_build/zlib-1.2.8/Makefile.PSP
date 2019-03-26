@@ -1,0 +1,10 @@
+PSPSDK=$(shell psp-config --pspsdk-path)
+PSPDIR=$(shell psp-config --psp-prefix)
+TARGET_LIB = libz.a
+OBJZ = adler32.o crc32.o deflate.o infback.o inffast.o inflate.o inftrees.o trees.o zutil.o
+OBJG = compress.o uncompr.o gzclose.o gzlib.o gzread.o gzwrite.o
+OBJS = $(OBJZ) $(OBJG)
+
+CFLAGS = -O2 -G0
+
+include $(PSPSDK)/lib/build.mak

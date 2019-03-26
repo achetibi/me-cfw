@@ -1,0 +1,34 @@
+PSP_BEGIN_EXPORTS
+
+PSP_EXPORT_START(syslib, 0, 0x8000)
+PSP_EXPORT_FUNC_HASH(module_start)
+PSP_EXPORT_FUNC_HASH(module_stop)
+PSP_EXPORT_VAR_HASH(module_info)
+PSP_EXPORT_END
+
+PSP_EXPORT_START(ATPRO, 0, 0x4001)
+PSP_EXPORT_FUNC_HASH(hexdump)
+PSP_EXPORT_FUNC_HASH(printk)
+PSP_EXPORT_FUNC_HASH(printk_sync)
+PSP_EXPORT_FUNC_HASH(patch_netconf_utility)
+PSP_EXPORT_FUNC_HASH(addChatLog)
+PSP_EXPORT_FUNC_HASH(popFromOutbox)
+PSP_EXPORT_FUNC_HASH(setConnectionStatus)
+PSP_EXPORT_FUNC_HASH(setReceptionPercentage)
+PSP_EXPORT_FUNC_HASH(setUserCount)
+PSP_EXPORT_FUNC_HASH(setframebuf)
+PSP_EXPORT_FUNC_HASH(read_buffer_positive)
+PSP_EXPORT_FUNC_HASH(peek_buffer_positive)
+PSP_EXPORT_FUNC_HASH(read_buffer_negative)
+PSP_EXPORT_FUNC_HASH(peek_buffer_negative)
+PSP_EXPORT_END
+
+PSP_EXPORT_START(GameFixes, 0, 0x4001)
+PSP_EXPORT_FUNC_HASH(killzone_createfpl)
+PSP_EXPORT_FUNC_HASH(load_plugin)
+PSP_EXPORT_FUNC_HASH(open_plugin)
+PSP_EXPORT_FUNC_HASH(load_plugin_io)
+PSP_EXPORT_FUNC_HASH(close_plugin)
+PSP_EXPORT_END
+
+PSP_END_EXPORTS

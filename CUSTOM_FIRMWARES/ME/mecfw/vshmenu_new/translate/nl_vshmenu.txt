@@ -1,0 +1,39 @@
+Geblokkeerd
+Geactiveerd
+Standaard
+GEEN
+Terug
+UMD disk
+Geheugen kaart
+Verborgen opslag
+Normaal
+OE isofs
+M33 stuurprogramma
+Sony NP9660
+ME stuurprogramma
+Inferno
+Rood
+Groen
+Blauw
+Roze
+Paars
+Oranje
+Geel
+Zwart
+Wit
+CPU TIJD XMB
+CPU TIJD SPEL
+USB APPARAAT
+UMD ISO MODUS
+ISO VIDEO MOUNT
+ACHTERGROND KLEUR
+XMB PLUGINS
+SPEL PLUGINS
+POPS PLUGINS
+PLUGIN BEHEER
+HERSTEL STARTEN
+APPARAAT AFLSUITEN
+SLAAP MODUS
+APPARAAT OPNIEUW OPSTARTEN
+VSH OPNIEUW OPSTARTEN
+AFLSUITEN

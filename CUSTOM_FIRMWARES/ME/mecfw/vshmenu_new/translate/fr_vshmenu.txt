@@ -1,0 +1,39 @@
+Désactivé
+Activé
+Par défaut
+Aucun
+Retour
+Disque UMD
+Memory Stick
+Stockage caché
+Normal
+OE isofs
+M33 driver
+Sony NP9660
+ME driver
+Inferno
+Rouge
+Vert
+Bleu
+Rose
+Violet
+Orange
+Jaune
+Noir
+Blanc
+VITESSE CPU XMB 
+VITESSE CPU JEU 
+CONNEXION USB   
+DRIVER UMD/ISO  
+ISO VIDEO       
+COULEUR DE FOND 
+PLUGINS  XMB    
+PLUGINS JEUX    
+PLUGINS POPS    
+GESTION PLUGINS
+MODE RECOVERY  
+ETEINDRE LA PSP
+MODE EN VEILLE
+RESET LA PSP
+RESET LE XMB
+QUITTER

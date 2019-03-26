@@ -1,0 +1,39 @@
+Desactivado
+Activado
+Por defecto
+NINGUNO
+Atras
+Disco UMD
+Memory Stick
+Almacenamiento oculto
+Normal
+OE isofs
+M33 driver
+Sony NP9660
+ME driver
+Inferno
+Rojo
+Verde
+Azul
+Rosa
+Púrpura
+Anaranjado
+Amarillo
+Negro
+Blanco
+VEL CPU XMB  
+VEL CPU GAME 
+DISPOSITIVO USB     
+DRIVER ISOs UMD 
+MONTAR ISO VIDEO
+COLOR VSH     
+PLUGINS XMB  
+PLUGINS GAME
+PLUGINS POPS  
+ADMINISTRADOR DE PLUGINS
+ENTRAR EN EL MENU RECOVERY 
+APAGAR CONSOLA
+SUSPENDER CONSOLA
+REINICIAR CONSOLA
+REINICIAR VSH
+SALIR
