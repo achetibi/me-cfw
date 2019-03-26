@@ -1,0 +1,198 @@
+Universal Unbricker
+Custom Firmwares
+Firmwares oficiales
+Operaciones sobre la NAND
+Información de hardware
+Probar M33
+Apagar
+Reiniciar
+Instalar OFW %s
+Instalar CFW %s
+Dumpear NAND
+Restaurar NAND
+Verificar NAND
+Formatear Flash
+Herramientas IdStorage
+Nuevo IdStorage
+Cambiar Región
+Reparar dirección MAC
+Copia de seguridad del IdStorage
+Restaurar IdStorage
+Flasheando %s %0.2f
+%i.PBP no encontrado en la raíz.
+El tamaño del fichero %i.PBP es incorrecto.
+Tu PSP no soporta este CFW.
+Custom Firmware
+Firmware oficial
+Verificando el paquete %i.PBP...
+%i.PBP está corrupto o es incorrecto. Falló la comprobación MD5.
+Extrayendo módulos del actualizador...
+No se puede desencriptar DATA.PSP
+Error al extraer el módulo %s
+Cargando módulos del actualizador...
+Error cargando los módulos de actualizador.
+No asignar Flash...
+Formateando Flash%i...
+Error al formatear la Flash%i: 0x%08X
+Asignando Flashes...
+Error al asignar la Flash%i: 0x%08X
+Creando directorios...
+Error al crear directorios en la flash%i.
+Error al abrir el fichero %i.PBP: 0x%08X
+Cargando PSAR...
+Error al leer el fichero %i.PBP
+Error: pspPSARInit no pudo ejecutarse.
+Error al decodificar PSAR: 0x%08X
+No se encuentra la ruta de %s
+Flasheando: %s
+Error al flashear %s
+No se puede desencriptar la IPL de PSP Slim.
+Error en %s.
+No se pueden desencriptar las tablas de referencia.
+No se puede desencriptar la tabla 0%ig.
+Restaurando el registro...
+La instalación se ha completado.\Se requiere un apagado. Una batería normal es\requerida para arrancar este firmware en la PSP.
+La instalación se ha completado.\Se requiere un apagado o un reinicio.
+Especificaciones
+Modelo: %s
+Generación: PSP %02ig
+Freq. CPU: %i Mhz
+Vel. BUS: %i Mhz
+RAM libre: %i MB
+Nombre: %s
+Versión: PSP-%04i
+Región: %s
+Firmware original: %s
+Placa base: %s
+Estado del WLAN: %s
+MAC: %02X:%02X:%02X:%02X:%02X:%02X
+Información del sistema
+Tachyon: 0x%08X
+Baryon: 0x%08X
+Pommel: 0x%08X
+Versión de Kirk: %c%c%c%c
+Versión de Spock: %c%c%c%c
+Acceso a EEPROM: %s
+ID Fuse: 0x%llX
+Config. Fuse: 0x%08X
+Inicio NAND: 0x%08X
+Tamaño de NAND: %i MB
+Firmware del UMD: %s
+Time Machine: %s
+Información de la MemoryStick
+Estado del arranque: 0x%02X
+Firma: 0x%04X
+Tipo de partición: 0x%02X
+Cabezal de inicio: 0x%02X
+Cabezal final: 0x%02X
+Tamaño: %i MB
+Espacio disponible para IPL: %i KB
+Sector ABS: 0x%08X
+Sectores totales: 0x%08X
+Clúster de inicio: 0x%04X
+Clúster final: 0x%04X
+Espacio disponible: %i MB
+Información de la batería
+Estado: %s
+Cargando
+En uso
+Fuente de alimentación: %s
+Batería
+Externa
+Nivel de batería: %i%%
+Tiempo restante: %i:%02i'
+Modo: %s
+Pandora
+Autoarranque
+Normal
+No soportada
+Capacidad restante: %i mAh
+Capacidad total: %i mAh
+Temperatura: %iºC
+Voltaje: %0.3fV
+Número de serie: %s
+Se ha encontrado una copia de la NAND ya existente en la MemoryStick.\\¿Deseas sobrescribirla?
+Tu MemoryStick no tiene espacio suficiente.
+Dumpeando NAND...
+Error 0x%08X al crear nand-dump_%08X.bin
+Dumpeo completo.\
+Se encontraron bloques corruptos:\\
+No se encontraron bloques corruptos.\
+No se ha encontrado el fichero nand-dump_%08X.bin en el directorio raíz.
+nand-dump_%08X.bin no tiene el tamaño correcto.
+La restauración física de una NAND puede ser peligrosa si tu NAND tiene más bloques corruptos que cuando la dumpeaste.\\¿Deseas continuar?
+Restaurando NAND...
+Información sobre NAND inesperada.
+Error 0x%08X al abrir nand-dump_%08X.bin
+¡Rota!
+Hay muchos errores de lectura/escritura.
+Se ha completado la restauración de la NAND.\Se requiere un apagado o reinicio.
+Comprobando NAND.
+Comprobación completada.\
+Tamaño de la Flash%i:
+Pulsa %s para formatear la flash.
+Cargando módulos...
+Error cargando los módulos.
+Formateando físicamente...
+Error 0x%08X en el formato físico.
+Creando particiones...
+Error 0x%08X en fdisk.
+Formato lógico (Flash%i)...
+Formato completado.
+Selecciona una región
+Obtener MAC real
+El interruptor WLAN está apagado.
+No se puede obtener la dirección MAC real.
+Salta este paso para generar una MAC aleatoria.
+MAC: (random)
+(random)
+Pulsa %s para crear un nuevo IdStorage.
+Esta operación borrará tu actual IdStorage y creará uno nuevo.\Este proceso deberá llevarse a cabo únicamente cuando un componente de la PSP no funciona adecuadamente (UMD, WLAN...).\\¿Deseas continuar?
+Formateando IdStorage...
+Error 0x%08X al formatear IdStorage.
+Creando índice IdStorage...
+Error 0x%08X al crear la clave 0x%04X
+Bug en el código de idsRegenerationGetIndex.
+Error 0x%08X al crear las claves 0x%04X/0x%04X
+Generando certificados y claves UMD...
+Error 0x%08X al generar certificados y claves UMD.
+Error 0x%08X al escribir la clave 0x%04X.
+Error al iniciar sceIdStorageFlush: 0x%08X
+Comprobando certificados...
+Error en la comprobación de certificados: 0x%08X
+Creando otras claves...
+El nuevo IdStorage se ha creado correctamente.
+Tras esta operación, tus descargas originales de PSN actuales dejarán de funcionar hasta que vuelvas a descargarlas/comprarlas de nuevo y tu PSP será identificada por tu PS3 y tu PC como un nuevo dispositivo.\\¿Deseas continuar?
+Cambiando región
+Error 0x%08X al escribir las claves 0x%04X/0x%04X
+Región cambiada con éxito.
+Restaurando dirección MAC original
+Error 0x%08X al escribir en el IdStorage.
+La dirección MAC se ha escrito correctamente.
+Un dumpeo previo del IdStorage se ha encontrado en el MemoryStick.\\¿Deseas sobrescribirlo?
+Dumpeando IdStorage...
+Error 0x%08X al crear el fichero id-storage_%08X.bin
+Guardando clave IdStorage: %04X
+No se ha encontrado el fichero id-storage_%08X.bin en el directorio raíz.
+El fichero id-storage_%08X.bin tiene un tamaño incorrecto.
+El dumpeo del IdStorage encontrado en el MemoryStick ha sido modificado y puede brickear tu consola.\\¿Deseas continuar?
+Este proceso puede brickear tu consola si el dumpeo no es original de la misma.\\¿Deseas continuar de todos modos?
+Restaurando IdStorage...
+Restaurando clave IdStorage: %04X
+Se ha completado la restauración.
+Japón
+América
+Australia
+Reino Unido
+Europa
+Corea
+Hong Kong
+Taiwán
+Rusia
+China
+México
+Desconocida
+Activado
+Desactivado
+Sí
+No

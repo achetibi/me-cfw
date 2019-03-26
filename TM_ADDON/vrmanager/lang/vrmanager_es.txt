@@ -1,0 +1,46 @@
+﻿Crear MemoryStick mágica
+Operaciones sobre la batería
+Salir al XMB
+Batería normal
+Batería Pandora
+Batería de autoarranque
+Despertar del Cementerio %s
+Operaciones sobre la batería
+Tu versión actual de firmware es incompatible. Por favor, actualiza a una versión más reciente.
+Selecciona tu versión
+El sector reservado para instalar el Time Machine IPL en tu MemoryStick no tiene espacio suficiente.
+%i.PBP no se encuentra en el directorio raíz.
+Se encontró una instalación previa en tu MemoryStick y será sobreescrita por la instalación actual.\\¿Deseas continuar?
+%i.PBP no tiene el tamaño correcto.
+Creando MemoryStick mágica...
+Comprobando %i.PBP...
+El md5 hash del fichero %i.PBP no coincide.
+Creando directorios...
+Error en la creación de directorios.
+Extrayendo módulos de la actualización...
+Desencriptar DATA.PSP
+Error en la extracción de módulos.
+Error 0x%08X abriendo %i.PBP
+Cargando PSAR...
+Error leyendo %i.PBP
+El proceso pspPSARInit falló.
+Error decodificando PSAR, pos: 0x%08X
+No se encuentra la ruta %s
+Instalando: %s
+Error instalando %s
+No se puede desencriptar la tabla de comunes.
+No se puede desencriptar la tabla 0%ig.
+Inyectando IPL...
+Error 0x%08X abriendo msstor:
+Guardando registro...
+Por favor, pulsa la(s) tecla(s) que quieres\usar para arrancar desde la MemoryStick mágica.
+La MemoryStick mágica ha sido creada.
+La placa base de este modelo PSP no soporta la lectura/escritura de la memoria EEPROM de la batería.
+Convertir batería
+batería normal
+batería Pandora
+batería de autoarranque
+Convertir en %s
+El número de serie actual de la batería es 0x%04X%04X. No hay necesidad de cambiar el número de serie.
+No se pudo escribir el número de serie en la EEPROM.
+Modo de la batería: %s\\Número de serie: 0x%08X

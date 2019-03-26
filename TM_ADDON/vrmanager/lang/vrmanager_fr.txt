@@ -1,0 +1,46 @@
+﻿Créer Magic Memory Stick
+Outils de la Batterie
+Quitter au XMB
+Convertir en Mode Normal
+Convertir en Mode Pandora
+Convertir en Mode Autoboot
+Despertar del Cementerio %s
+Operations de la batterie
+Votre version du firmware actuel n'est pas supporté. Veuillez mettre à jour vers une nouvelle version et recommencer.
+Seléctionner la version
+L'espace secteur reservé est insufisant sur votre Memory Stick pour installer l'IPL Time Machine.
+%i.PBP non trouvé a la racine.
+Une installation existante trouvée sur votre Memory Stick et elle va être remplacée par cette installation\\Voulez-vous continuer ?
+Taille de %i.PBP invalide.
+Création du Magic Memory Stick
+Vérification de %i.PBP...
+MD5 de %i.PBP est invalide.
+Création des dossiers...
+Échec de création des dossiers.
+Extraction des modules...
+Impossible de décrypter DATA.PSP
+Erreur d'extraction des modules.
+Erreur 0x%08X d'ouverture de %i.PBP
+Chargement du PSAR...
+Échec de lecture de %i.PBP
+Échec de pspPSARInit.
+Erreur de décodage du PSAR, pos: 0x%08X
+Impossible de trouver le chemin de %s
+Installation: %s
+Erreur d'installation de %s
+Impossible de décrypter la table commune.
+Impossible de décrypter le table 0%ig.
+Injection de l'IPL...
+Erreur 0x%08X d'ouverture de msstor:
+Sauvegarde du registre...
+Verouiller le(s) bouton(s) que vous voulez\utiliser pour booter du Magic Memory Stick
+Création du Magic Memory Stick terminé
+Le hardware de votre PSP ne support pas la lecture ou l'écriture de/vers le EEPROM de la batterie.
+Convertir la batterie
+Mode Normal
+Mode Pandora
+Mode Autoboot
+Conversion en %s
+Le numéro de série actuel de la batterie est déjà 0x%04X%04X. Pas besoin de changer le numéro de série.
+Impossible d'écrir le numéro de serie dans le EEPROM.
+Mode de la batterie: %s\\Numéro de série: 0x%08X

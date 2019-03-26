@@ -1,0 +1,46 @@
+﻿Create Magic Memory Stick
+Battery Operations
+Exit to XMB
+Convert Battery to Normal
+Convert Battery to Pandora
+Convert Battery to Autoboot
+Despertar del Cementerio %s
+Battery Operations
+Your current firmware version is unsupported. Please update to a newer custom firmware.
+Select your version
+Your Memory Stick has insufficient reserved sector space to install Time Machine IPL.
+%i.PBP not found at root.
+An existing installation was found on your Memory Stick and it will be owerwritten by this installation.\\Do you want to continue?
+Invalid %i.PBP file size.
+Creating Magic Memory Stick
+Verifying %i.PBP
+%i.PBP md5 mismatch.
+Creating directories...
+Error creating directories.
+Extracting updater modules...
+Enable to decrypt DATA.PSP
+Error extracting modules.
+Error 0x%08X opening %i.PBP
+Loading PSAR...
+Error reading %i.PBP
+pspPSARInit failed.
+PSAR decode error, pos: 0x%08X
+Cannot find path of %s
+Installing: %s
+Error installing %s
+Cannot decrypt common table.
+Cannot decrypt 0%ig table.
+Injecting IPL...
+Error 0x%08X opening msstor:
+Saving registery...
+Please hold the key(s) which you want to\use to boot from the Magic Memory Stick
+Magic Memory Stick has been created
+The PSP hardware does not support read or write from/to the Battery EEPROM.
+Convert Battery
+Normal Battery
+Pandora Battery
+Autoboot Battery
+Converting to %s
+The current battery serial is already set to 0x%04X%04X. There is no need to change the battery serial.
+Unable to write the serial to EEPROM.
+Battery Mode: %s\\Battery Serial: 0x%08X

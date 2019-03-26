@@ -1,0 +1,198 @@
+Débriqueur Universel
+Custom Firmwares
+Firmwares Officiel
+Outils de Nand
+Info. Hardware
+Tester M33
+Éteindre
+Rebooter
+Installer OFW %s
+Installer CFW %s
+Dumper le Nand
+Restaurer le Nand
+Vérifier le Nand
+Formater le flash
+Outils de IdStorage
+Nouveau IdStorage
+Changer la Région
+Réparer l'adresse MAC
+Sauvegarder l'IdStorage
+Restaurer l'IdStorage
+Flashage du %s %0.2f
+%i.PBP non trouvé a la racine.
+Taille de %i.PBP invalide.
+Ce custom firmware n'est pas supporté par votre PSP.
+Custom Firmware
+Firmware Officiel
+Vérification de %i.PBP...
+%i.PBP est invalide ou corrompu le MD5 est incorrect.
+Extraction des modules...
+Impossible de décrypter DATA.PSP
+Erreur d'extraction du module %s
+Chargement des modules...
+Erreur de chargement des modules.
+Déassigne le flash...
+Formatage du flash%i...
+Échec de formatage du flash%i: 0x%08X
+Assigne les flashes...
+Échec de l'assignation du flash%i: 0x%08X
+Création des dossiers...
+Échec de création des dossiers du flash%i.
+Erreur d'ouverture de %i.PBP: 0x%08X
+Chargement du PSAR...
+Échec de lecture de %i.PBP
+Échec de pspPSARInit.
+Erreur de décodage du PSAR: 0x%08X
+Impossible de trouver le chemin de %s
+Flashage: %s
+Échec du flashage de %s
+Impossible de décrypter l'IPL de PSP Slim.
+Erreur dans %s.
+Impossible de décrypter la table commune.
+Impossible de décrypter le table 0%ig.
+Restauration du registre...
+Installation terminée.\Vous devez éteindre la PSP. Une batterie\normale est requis pour démarrer ce\firmware sur cette PSP.
+Installation terminée.\Vous devez éteindre ou redémarrer la PSP.
+Informations PSP
+Model: %s
+Génération: PSP %02ig
+Vitesse CPU: %i Mhz
+Vitesse BUS: %i Mhz
+RAM Libre: %i MB
+Nom: %s
+Version: PSP-%04i
+Région: %s
+Firmware d'origine: %s
+Carte mère: %s
+Statut WLAN: %s
+MAC: %02X:%02X:%02X:%02X:%02X:%02X
+Informations Système
+Tachyon: 0x%08X
+Baryon: 0x%08X
+Pommel: 0x%08X
+Version Kirk: %c%c%c%c
+Version Spock: %c%c%c%c
+Accès EEPROM: %s
+Fuse Id: 0x%llX
+Fuse Config: 0x%08X
+Nand Seed: 0x%08X
+Taille Nand: %i MB
+Firmware UMD: %s
+Time Machine: %s
+Informations Memory Stick
+Boot Statuts: 0x%02X
+Signature: 0x%04X
+Type Partition: 0x%02X
+Premier entête: 0x%02X
+Dernier entête: 0x%02X
+Taille MS: %i MB
+Espace IPL Dispo.: %i KB
+Abs Secteur: 0x%08X
+Secteurs Total: 0x%08X
+Premier Sec/Clu: 0x%04X
+Dernier Sec/Clu: 0x%04X
+Espace MS Libre: %i MB
+Informations Batterie
+Statuts: %s
+En Charge
+Utilisation
+Source: %s
+Batterie
+Chargeur
+Niveau de charge: %i%%
+Temps restant: %i:%02i'
+Mode: %s
+Pandora
+AutoBoot
+Normal
+Non Supporter
+Capacité Restante: %i mAh
+Capacité Totale: %i mAh
+Temp. Batterie : %iºC
+Voltage Batterie: %0.3fV
+Serial: %s
+Un dump du nand est trouvé.\\Voulez-vous écrasé le dump du nand présent?
+Vous n'avez pas assez d'espace libre sur votre Memory Stick.
+Dump du nand en cours...
+Erreur 0x%08X de création nand-dump_%08X.bin
+Dump terminé.\
+Des bloques endommagés ont été retrouvés:\\
+Pas de bloques endommagés trouvés.
+nand-dump_%08X.bin non trouvé a la racine.
+nand-dump_%08X.bin n'a pas la taille correcte pour ce hardware.
+La restauration physique peut s'avérer très dangereuse si votre nand a plus de bloques endommagés que le dump.\\Voulez-vous continuer?
+Restauration du nand...
+Info nand inattendu.
+Erreur 0x%08X d'ouverture de nand-dump_%08X.bin
+Arrêt!
+Il y-a plusieurs erreurs d'écriture/écrasement.
+Restauration terminée.\Vous devez éteindre ou redémarrer la PSP.
+Vérification du nand...
+Vérification terminée.\
+Taille flash%i:
+Appuyez sur %s pour commencer.
+Chargement des modules...
+Erreur de chargement des modules.
+Formatage physique...
+Erreur 0x%08X dans le formatage physique.
+Création des partitions...
+Erreur 0x%08X dans fdisk.
+Formatage logique (flash%i)...
+Formatage terminé.
+Choisir la région
+Trouvé le MAC réel
+L'interrupteur WLAN est désactivé.
+Impossible de trouvé le MAC réel.
+Passer cette étape pour générer MAC aléatoire
+MAC: (Aléatoire)
+(Aléatoire)
+Appuyez sur %s pour créer un nouveau IdStorage.
+Cette opération supprime votre idstorage et créer un nouveau.\Vous devez faire cette opération si une part de votre PSP fonctionne male (UMD, WLAN, etc.)\\Voulez-vous continué?
+Formatage de l'idstorage...
+Erreur 0x%08X de formatage de l'idstorage.
+Création de l'index idstorage...
+Erreur 0x%08X de création de la clé 0x%04X
+Un bug dans le code idsRegenerationGetIndex.
+Erreur 0x%08X de création des clés 0x%04X/0x%04X
+Génération des certificats et clés UMD...
+Erreur 0x%08X de création de certificat et clés UMD.
+Erreur 0x%08X d'écriture de la clé 0x%04X
+Échec de sceIdStorageFlush: 0x%08X
+Vérification des certificats...
+Échec de vérification des certificats: 0x%08X
+Création des autre clés...
+IdStorage créé avec succès.
+Après cette opération, vos jeux PSN original ne marcheront plus et vous devez les rachetés a nouveau, votre PSP sera identifié par la PS3 et le PC comme un nouveau périphérique.\\Voulez-vous continuer?
+Changement de région
+Erreur 0x%08X d'écriture des clés 0x%04X/0x%04X
+Région changé avec succès.
+Restauration de l'adresse MAC
+Erreur 0x%08X d'écriture dans l'idstorage.
+MAC d'origine écrit avec succès.
+Un dump du idstorage est trouvé sur le Memory Stick.\\Voulez-vous écrasé le dump du idstorage présent?
+Dump de l'IdStorage...
+Erreur 0x%08X de création id-storage_%08X.bin
+Sauvegarde la clé: %04X
+id-storage_%08X.bin non trouvé a la racine.
+id-storage_%08X.bin n'a pas la taille correcte.
+Le dump de l'idstorage trouvé sur le Memory Stick a été modifié depuis sa création, et peut causer un brick de la PSP.\\Voulez-vous continuer?
+Ce processus est capable de causé un brick définitif de votre PSP si le dump n'a pas été créer depuis cette PSP.\\Voulez-vous continuer?
+Restauration de l'IdStorage...
+Restaure la clé: %04X
+Restauration terminé.
+Japon
+Amérique
+Australie
+Royaume-Uni
+Europe
+Corée
+Hong Kong
+Taïwan
+Russie
+Chine
+Méxique
+Inconnu
+Activé
+Désactivé
+Oui
+Non
