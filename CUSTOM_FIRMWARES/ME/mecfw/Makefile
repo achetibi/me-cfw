@@ -19,7 +19,7 @@ cfw:
 	make -C vshctrl			TARGET_FW=$(TARGET_FW)
 	make -C custom_ipl		TARGET_FW=$(TARGET_FW)
 	make -C installer		TARGET_FW=$(TARGET_FW)
-ifeq ($(TARGET_FW), 660)
+ifeq ($(TARGET_FW), $(filter $(TARGET_FW), 660 661))
 	make -C tmaddon			TARGET_FW=$(TARGET_FW)
 endif
 
@@ -100,7 +100,7 @@ clean:
 	make clean -C idcanager
 	make clean -C custom_ipl
 	make clean -C installer
-ifeq ($(TARGET_FW), 660)
+#ifeq ($(TARGET_FW), $(filter $(TARGET_FW), 660 661))
 	make clean -C tmaddon
 #endif
 	make clean -C kxploit LITE=0
@@ -163,7 +163,7 @@ ifeq ($(TARGET_FW), 660)
 #	@rm -f EBOOT.PBP
 
 distribute_tmaddon:
-ifeq ($(TARGET_FW), 660)
+ifeq ($(TARGET_FW), $(filter $(TARGET_FW), 660 661))
 	mkdir -p dist/release_timemachine/PSP/GAME/TIMEMACHINE_ADDON
 	cp tmaddon/installer/EBOOT.PBP dist/release_timemachine/PSP/GAME/TIMEMACHINE_ADDON
 	cp tmaddon/libpsardumper/libpsardumper.prx dist/release_timemachine/PSP/GAME/TIMEMACHINE_ADDON
