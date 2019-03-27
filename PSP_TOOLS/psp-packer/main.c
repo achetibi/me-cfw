@@ -507,9 +507,18 @@ int main(int argc, char *argv[]) {
 			}
 		}
 		else if(magic[0] == 0x5053507E) {
+			PSP_Header header;
 			size_psp = size;
 			size_elf = *(u32 *)&src[0x28];
+			
+			memcpy(&header, src, 0x150);
 			memcpy(src, src + 0x150, size - 0x150);
+			
+			if ((u16)src[0] != 0x1F8B) {
+				// unscramble
+				scramble_simple((u32*)(src) , (u32 *)&header.key_data1, 0x10);
+				scramble(src, header.comp_size, &(header.scheck[0x38]), 0x20);
+			}
 		}
 		else if(magic[0] == 0x4543537E) {
 			size_psp = size;
