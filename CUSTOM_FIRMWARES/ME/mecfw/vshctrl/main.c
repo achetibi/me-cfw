@@ -51,17 +51,22 @@ void *search_module_stub(SceModule2 *pMod, const char *szLib, u32 nid)
 	struct SceLibraryStubTable *current;
 	int i = 0 ,j;
 
-	while( i < entLen ) {
+	while( i < entLen )
+	{
 		current = (struct SceLibraryStubTable *)(entTab + i);
-		if(strcmp(current->libname, szLib ) == 0) {
-			for(j=0;j< current->stubcount ;j++) {
-				if( current->nidtable[j] == nid ) {
+		if(strcmp(current->libname, szLib ) == 0)
+		{
+			for(j=0;j< current->stubcount ;j++)
+			{
+				if( current->nidtable[j] == nid )
+				{
 					return (void *)((u32)(current->stubtable) + 8*j );
 				}
 			}
 
 			break;
 		}
+
 		i += (current->len * 4);
 	}
 
@@ -69,6 +74,7 @@ void *search_module_stub(SceModule2 *pMod, const char *szLib, u32 nid)
 }
 
 int (* get_sfo_param)() = NULL;
+
 int sfo_patch(int a0, const char *a1 ,char *a2, int a3 )
 {
 	int ret = get_sfo_param( a0, a1, a2, 8 );
@@ -76,14 +82,16 @@ int sfo_patch(int a0, const char *a1 ,char *a2, int a3 )
 	{
 		int k1 = pspSdkSetK1(0);
 		const char *ver_str = init_version_str();
-		if( strncmp( ver_str , a2 , 4 ) < 0 )	{
+		if( strncmp( ver_str , a2 , 4 ) < 0 )
+		{
 			memcpy( a2, ver_str, 4 );	
 		}
+
 		pspSdkSetK1(k1);
 	}
+
 	return ret;
 }
-
 
 int umd_id = -1;
 u32	umd_timer=0;
@@ -107,11 +115,14 @@ int exit_cb(int arg1, int arg2, void *arg)
 {
 	pspUmdCallback( arg2);
 
-	if( iso_mount && umd_mode ) {
-		if( arg2 == 1) {
+	if( iso_mount && umd_mode )
+	{
+		if( arg2 == 1)
+		{
 			umd_timer = sceKernelGetSystemTimeLow();
 		}
 	}
+
 	return 0;
 }
 
@@ -142,7 +153,8 @@ int vctrlVSHExitVSHMenu(SEConfig *g_conf, char *videoiso, int disctype)
 	
 			if(old_cpu != new_cpu )
 			{			
-				if(new_cpu == 0) {	
+				if(new_cpu == 0)
+				{
 					new_cpu = 222;
 					new_bus = 111;
 				}
@@ -156,7 +168,6 @@ int vctrlVSHExitVSHMenu(SEConfig *g_conf, char *videoiso, int disctype)
 
 				real_time = sceKernelGetSystemTimeLow();
 			}
-
 		}
 	}
 
@@ -167,7 +178,9 @@ int vctrlVSHExitVSHMenu(SEConfig *g_conf, char *videoiso, int disctype)
 		int st = sceUmdCheckMedium();
 //		printf( "umd 0x%08X \n", st );
 		if( st != 1 )
+		{
 			umd_mode = 1;
+		}
 
 		if(iso_mount == 0 )
 		{
@@ -197,10 +210,13 @@ int vctrlVSHExitVSHMenu(SEConfig *g_conf, char *videoiso, int disctype)
 	else
 	{
 		if(iso_mount)
-			unmount_iso();	
+		{
+			unmount_iso();
+		}
 	}
 
 	pspSdkSetK1(k1);
+
 	return 0;
 }
 
@@ -269,15 +285,19 @@ int GetIsoIndex(const char *file)
 
 	char *pos = strstr(file, "/MMMMMISO");
 	if(!pos)
+	{
 		return -1;
+	}
 
 	char *p = strchr( pos + 9, '/');
 	if (!p)
+	{
 		return strtol( pos + 9, NULL, 10);
+	}
 
 	memset(number , 0 , sizeof(number));
-
 	strncpy(number,  pos + 9 , p-( pos + 9));
+
 	return strtol(number, NULL, 10);
 }
 
@@ -291,7 +311,9 @@ static int CheckPrometheus()
 	{
 		getlba_andsize( &arg, (PROME_BIN + 6) , &ret, &ret);
 	}
+
 	isofs_exit(NULL);
+
 	return ret;
 }
 
@@ -655,8 +677,6 @@ static void PatchVshMain(SceModule2 *mod )
 	/* kill DISC_ID check ( may needless ) */
 	_sw(0		, buf + PBP_HEADER_PATCH1 );
 	_sw(0		, buf + PBP_HEADER_PATCH2 );
-
-	/*   */
 	_sw(0		, buf + PBP_HEADER_PATCH3 );
 
 	MAKE_SYSCALL( (u32)search_module_stub( mod, "sceUmdUser", 0xAEE7404D) + 4 , sceKernelQuerySystemCall(sceUmdRegisterUMDCallBackPatch));
@@ -696,7 +716,9 @@ static void PatchVshMain(SceModule2 *mod )
 	}
 
 	if( config.skipgameboot)
+	{
 		_sw( 0x00001021 , text_addr + VSH_SKIP_GAMEBOOT_PATCH_ADDR );
+	}
 
 	MAKE_JUMP( (u32)search_module_stub( mod, "IoFileMgrForKernel", 0x54F5FB11 ), PatchDevctl );
 	//MAKE_CALL( text_addr + VSH_DEVCTRL_PATCH_ADDR , PatchDevctl);
@@ -794,7 +816,6 @@ static void PatchSysconfPlugin(u32 text_addr)
 	ClearCaches();
 }
 
-
 static void PatchGamePlugin(u32 text_addr )
 {
 	_sw(0x03E00008, text_addr + GP_PATCH_ADDR1);	//jr	$ra
@@ -806,11 +827,9 @@ static void PatchGamePlugin(u32 text_addr )
 	//multi disc patch
 	_sw( 0 , text_addr + MULTI_DISC_PSX_PATCH_ADDR );
 
-
 	//Lisence error patch
 	_sw( 0x00001021 , text_addr + RIF_CHECK_PATCH_ADDR );
 //	_sw(0x00001021, text_addr + 0x00001AFC );
-
 
 	if(config.hidepng)
 	{

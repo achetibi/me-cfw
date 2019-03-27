@@ -22,10 +22,7 @@
 #include "virtualpbpmgr.h"
 #include "isocache.h"
 
-static SceUID gamedfd = -1,
-		game150dfd = -1,
-       isodfd = -1;
-
+static SceUID gamedfd = -1, game150dfd = -1, isodfd = -1;
 static int device_flag = 0;
 static SceUID paramsfo = -1;
 static u32 overiso = 0;
@@ -200,7 +197,6 @@ SceUID sceIoDopenPatched(const char *dirname)
 	pspSdkSetK1(k1);
 	return res;
 }
-
 
 int iso_ctrl(SceIoDirent *dir, int dev)
 {		
@@ -466,7 +462,7 @@ SceUID sceIoOpenPatched(const char *file, int flags, SceMode mode)
 
 	Fix150Path(file);
 
-//	printf("opening file; %s \n", file);
+	//printf("opening file; %s \n", file);
 	//Kprintf("opening file; ra = %08X %s\n", sceKernelGetSyscallRA(), file);
 
 	index = GetIsoIndex(file);
@@ -804,6 +800,23 @@ static const IoFileMgr_patch_list io_patch_list[] = {
 };
 
 #elif _PSP_FW_VERSION == 660
+static const IoFileMgr_patch_list io_patch_list[] = {
+	{ 0x00003FD0, sceIoOpenPatched		},
+	{ 0x00003F90, sceIoClosePatched		},
+	{ 0x000040E0, sceIoReadPatched		},
+	{ 0x00004150, sceIoLseekPatched		},
+	{ 0x00004188, sceIoLseek32Patched	},
+	{ 0x0000427C, sceIoGetstatPatched	},
+	{ 0x0000429C, sceIoChstatPatched	},
+	{ 0x0000170C, sceIoRemovePatched	},
+	{ 0x00001444, sceIoDopenPatched		},
+	{ 0x000015B8, sceIoDreadPatched		},
+	{ 0x00001668, sceIoDclosePatched	},
+	{ 0x0000423C, sceIoRmdirPatched		},
+	{ 0x00004220, sceIoMkdirPatched		}
+};
+
+#elif _PSP_FW_VERSION == 661
 static const IoFileMgr_patch_list io_patch_list[] = {
 	{ 0x00003FD0, sceIoOpenPatched		},
 	{ 0x00003F90, sceIoClosePatched		},

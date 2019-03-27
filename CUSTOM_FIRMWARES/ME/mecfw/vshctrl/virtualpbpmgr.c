@@ -215,7 +215,9 @@ int virtualpbp_init()
 	init_version_str();
 
 	if( config.execute_pboot )
+	{
 		virtualsfo[0xEC] = 'E';
+	}
 
 	return 0;
 }
@@ -446,8 +448,7 @@ int virtualpbp_read(SceUID fd, void *data, SceSize size)
 			read += n;
 		}
 
-		/*if ((vpbps[fd].filepointer >= vpbps[fd].header[2]) &&
-			(vpbps[fd].filepointer < vpbps[fd].header[3]))
+		/*if ((vpbps[fd].filepointer >= vpbps[fd].header[2]) && (vpbps[fd].filepointer < vpbps[fd].header[3]))
 		{
 			base = vpbps[fd].filepointer - vpbps[fd].header[2];
 			
@@ -470,10 +471,8 @@ int virtualpbp_read(SceUID fd, void *data, SceSize size)
 			read += n;
 		}*/
 
-		if ((vpbps[fd].filepointer >= vpbps[fd].header[2]) && 
-			(vpbps[fd].filepointer < vpbps[fd].header[3]))
+		if ((vpbps[fd].filepointer >= vpbps[fd].header[2]) && (vpbps[fd].filepointer < vpbps[fd].header[3]))
 		{
-			
 			memcpy(virtualsfo+0x118, vpbps[fd].sfotitle,  64  + 8 );//4A90
 			
 			if(vpbps[fd].discid[0])
@@ -484,7 +483,7 @@ int virtualpbp_read(SceUID fd, void *data, SceSize size)
 			char *ver_str = vpbps[fd].system_ver;
 			if( strncmp( psp_system_version , ver_str , 4 ) < 0 )
 			{
-					ver_str = psp_system_version;
+				ver_str = psp_system_version;
 			}
 			memcpy(virtualsfo+0x10C ,  ver_str , 4 );
 
@@ -510,8 +509,7 @@ int virtualpbp_read(SceUID fd, void *data, SceSize size)
 			read += n;
 		}
 
-		if ((vpbps[fd].filepointer >= vpbps[fd].header[3]) && 
-			(vpbps[fd].filepointer < vpbps[fd].header[4]))
+		if ((vpbps[fd].filepointer >= vpbps[fd].header[3]) && (vpbps[fd].filepointer < vpbps[fd].header[4]))
 		{
 			base = vpbps[fd].filepointer - vpbps[fd].header[3];
 			
@@ -534,8 +532,7 @@ int virtualpbp_read(SceUID fd, void *data, SceSize size)
 			read += n;
 		}
 
-		if ((vpbps[fd].filepointer >= vpbps[fd].header[4]) && 
-			(vpbps[fd].filepointer < vpbps[fd].header[5]))
+		if ((vpbps[fd].filepointer >= vpbps[fd].header[4]) && (vpbps[fd].filepointer < vpbps[fd].header[5]))
 		{
 			base = vpbps[fd].filepointer - vpbps[fd].header[4];
 			
@@ -558,8 +555,7 @@ int virtualpbp_read(SceUID fd, void *data, SceSize size)
 			read += n;
 		}
 
-		if ((vpbps[fd].filepointer >= vpbps[fd].header[5]) && 
-			(vpbps[fd].filepointer < vpbps[fd].header[6]))
+		if ((vpbps[fd].filepointer >= vpbps[fd].header[5]) && (vpbps[fd].filepointer < vpbps[fd].header[6]))
 		{
 			base = vpbps[fd].filepointer - vpbps[fd].header[5];
 			
@@ -582,8 +578,7 @@ int virtualpbp_read(SceUID fd, void *data, SceSize size)
 			read += n;
 		}
 
-		if ((vpbps[fd].filepointer >= vpbps[fd].header[6]) && 
-			(vpbps[fd].filepointer < vpbps[fd].header[7]))
+		if ((vpbps[fd].filepointer >= vpbps[fd].header[6]) && (vpbps[fd].filepointer < vpbps[fd].header[7]))
 		{
 			base = vpbps[fd].filepointer - vpbps[fd].header[6];
 			
@@ -606,8 +601,7 @@ int virtualpbp_read(SceUID fd, void *data, SceSize size)
 			read += n;
 		}
 
-		if ((vpbps[fd].filepointer >= vpbps[fd].header[7]) &&
-			(vpbps[fd].filepointer < vpbps[fd].header[8]))
+		if ((vpbps[fd].filepointer >= vpbps[fd].header[7]) && (vpbps[fd].filepointer < vpbps[fd].header[8]))
 		{
 			base = vpbps[fd].filepointer - vpbps[fd].header[7];
 			

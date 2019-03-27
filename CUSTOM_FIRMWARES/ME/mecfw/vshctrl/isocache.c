@@ -33,7 +33,8 @@ int ReadCache(int dev)
 	SceUID fd;
 	int i;
 
-	if (!cache) {
+	if (!cache)
+	{
 		cache = (VirtualPbp *)sctrlKernelMalloc(32*sizeof(VirtualPbp));//sctrlMalloc
 	}
 
