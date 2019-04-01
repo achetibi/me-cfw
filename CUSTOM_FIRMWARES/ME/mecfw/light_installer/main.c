@@ -27,6 +27,9 @@
 #elif _PSP_FW_VERSION == 660
 #define DEVKIT_VER	0x06060010
 #define VER_STR	"6.60"
+#elif _PSP_FW_VERSION == 661
+#define DEVKIT_VER	0x06060110
+#define VER_STR	"6.61"
 #endif
 
 PSP_MODULE_INFO("plutonium_updater", 0x800, 0, 1);
@@ -418,14 +421,14 @@ int main(int argc, char** argv)
 	else if( model == 4)
 		modules = (Module *)modules_05g;
 
-#if _PSP_FW_VERSION == 639 || _PSP_FW_VERSION == 660
+#if _PSP_FW_VERSION == 639 || _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 	else if( model == 6)
 		modules = (Module *)modules_07g;
 	else if( model == 8)
 		modules = (Module *)modules_09g;
 #endif
 
-#if _PSP_FW_VERSION == 660
+#if _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 	else if( model == 10)
 		modules = (Module *)modules_11g;
 #endif

@@ -34,12 +34,12 @@
 #include "../pspbtjnf/pspbtjnf_05g.h"
 #include "../systemctrl/systemctrl_05g_bin.h"
 
-#if _PSP_FW_VERSION == 639 || _PSP_FW_VERSION == 660
+#if _PSP_FW_VERSION == 639 || _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 #include "../pspbtjnf/pspbtjnf_07g.h"
 #include "../pspbtjnf/pspbtjnf_09g.h"
 #endif
 
-#if _PSP_FW_VERSION == 660
+#if _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 #include "../pspbtjnf/pspbtjnf_11g.h"
 #endif
 
@@ -121,7 +121,7 @@ Module modules_05g[MODULES_COUNT] =
 	{ "flash0:/kd/systemctrl_05g.prx", systemctrl_05g, sizeof(systemctrl_05g) }
 };
 
-#if _PSP_FW_VERSION == 639 || _PSP_FW_VERSION == 660
+#if _PSP_FW_VERSION == 639 || _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 Module modules_07g[MODULES_COUNT] =
 {
 	{ "flash0:/kd/rebooter.prx", reboot_02g , sizeof(reboot_02g) },
@@ -141,7 +141,7 @@ Module modules_09g[MODULES_COUNT] =
 };
 #endif
 
-#if _PSP_FW_VERSION == 660
+#if _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 Module modules_11g[MODULES_COUNT] =
 {
 	{ "flash0:/kd/rebooter.prx", reboot_02g , sizeof(reboot_02g) },
