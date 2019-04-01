@@ -191,6 +191,63 @@ static const struct AddrList pops_patch_list = {
 
 };
 
+#elif _PSP_FW_VERSION == 661
+static const struct AddrList pops_patch_list = {
+	.popsman_list = {
+		.DecryptPatchAddr1	= 0x00000B0C,
+		.DecryptPatchAddr2	= 0x00000EAC,
+		.DecryptPatchAddr3	= 0x00000A28,
+		.DecryptPatchAddr4	= 0x00000564,
+//		.ExitVSHKernelAddr	= 0x00001F58,
+		.Document_fd_Addr	= 0x00004990,
+		.RifCheckPatchAddr1	= 0x00002DCC,
+		.RifCheckPatchAddr2	= 0x00002DD0,
+		.IoOpenPatchAddr	= 0x00003B9C,//0x00003BA8,
+		.IoctlPatchAddr		= 0x00003BAC,//0x00003BB8,
+		.IoReadPatchAddr	= 0x00003BB4,//0x00003BC0,
+		.GetKeyPatchAddr1	= 0x00002F14,
+		.GetKeyPatchAddr2	= 0x00000C8C,
+		.GetKeyAddr			= 0x0000266C,
+		.DevkitVerPatchAddr = 0x00001E80,
+	},
+	.pops_list_01g = {
+		.IconPatchAddr		= 0x00036D50,//0x00036F54,
+//		.DecryptFuncAddr	= 0x00016078,//0x00016210,
+		.DecryptPatchAddr	= 0x0000DB78,//0x0000DC04,
+		.GameIdPatchAddr	= 0x00025254,//0x00025428,
+	},
+	.pops_list_02g = { // 03g
+		.IconPatchAddr		= 0x00037D8C,
+//		.DecryptFuncAddr	= 0x000162F0,
+		.DecryptPatchAddr	= 0x0000DB78,
+		.GameIdPatchAddr	= 0x00025760,
+	},
+	.pops_list_04g = {
+		.IconPatchAddr		= 0x00037E04,
+//		.DecryptFuncAddr	= 0x00016348,
+		.DecryptPatchAddr	= 0x0000DBE8,
+		.GameIdPatchAddr	= 0x000257D8,
+	},
+	.pops_list_05g = {
+		.IconPatchAddr		= 0x00039BEC,
+		.DecryptPatchAddr	= 0x0000E300,
+		.GameIdPatchAddr	= 0x0002606C,
+	},
+	.pops_list_07g = { // 09g
+		.IconPatchAddr		= 0x00037E1C,
+//		.DecryptFuncAddr	= 0x00016360,//0x00016348,
+		.DecryptPatchAddr	= 0x0000DBE8,//0x0000DBE8,
+		.GameIdPatchAddr	= 0x000257F0,//0x000257D8,
+	},
+	.pops_list_11g = {
+		.IconPatchAddr		= 0x00036DCC,//0x00037E04,
+//		.DecryptFuncAddr	= 0x000160E8,//0x00016348,
+		.DecryptPatchAddr	= 0x0000DBE8,//0x0000DBE8,
+		.GameIdPatchAddr	= 0x000252D0,//0x000257D8,
+	},
+
+};
+
 #else
 #error Target PatchList is not found !
 #endif
