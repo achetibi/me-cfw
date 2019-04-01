@@ -13,6 +13,10 @@
 #elif _PSP_FW_VERSION == 660
 	IMPORT_START	"InterruptManagerForKernel", 0x00010000
 	IMPORT_FUNC "InterruptManagerForKernel", 0xF153B371, sceKernelQuerySystemCall
+	
+#elif _PSP_FW_VERSION == 661
+	IMPORT_START	"InterruptManagerForKernel", 0x00010000
+	IMPORT_FUNC "InterruptManagerForKernel", 0xF153B371, sceKernelQuerySystemCall
 
 #else
 #error InterruptManagerForKernel.S

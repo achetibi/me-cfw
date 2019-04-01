@@ -213,6 +213,10 @@ void UsbChargeStart()
 #define UsbChargePatchAddr1	0x00008FE8
 #define UsbChargePatchAddr2	0x00008FF0
 
+#elif _PSP_FW_VERSION == 661
+#define UsbChargePatchAddr1	0x00008FE8
+#define UsbChargePatchAddr2	0x00008FF0
+
 #endif
 
 			MAKE_DUMMY_FUNCTION0(text_addr + UsbChargePatchAddr1 );//scePowerBatteryEnableUsbCharging

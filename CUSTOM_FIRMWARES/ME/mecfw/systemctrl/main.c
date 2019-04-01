@@ -58,6 +58,10 @@ int WriteFile(char *file, void *buf, int size)
 #define INTEREPT_PATCH_ADDR0	0x00000E98
 #define INTEREPT_PATCH_ADDR1	0x00000DEC
 
+#elif _PSP_FW_VERSION == 661
+#define INTEREPT_PATCH_ADDR0	0x00000E98
+#define INTEREPT_PATCH_ADDR1	0x00000DEC
+
 #else
 #error intereptman
 #endif
@@ -115,6 +119,22 @@ static const u16 sysmem_patch_list[] ={
 	0x00009EBC,//
 	0x00009F6C,//
 };
+
+#elif _PSP_FW_VERSION == 661
+static const u16 sysmem_patch_list[] ={
+	0x000098F0,//
+	0x00009A10,//
+	0x00009AA8,//
+	0x00009B58,//
+	0x00009C2C,//
+
+	0x00009CD0,//
+	0x00009D74,//
+	0x00009E0C,//
+	0x00009EBC,//
+	0x00009F6C,//
+};
+
 #else
 #error sysmem
 #endif

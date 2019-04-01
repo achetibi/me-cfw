@@ -37,6 +37,10 @@ struct AddrList{
 #define CFW_VER_MAJOR	0x0606
 #define CFW_VER_MINOR   0x0010
 
+#elif _PSP_FW_VERSION == 661
+#define CFW_VER_MAJOR	0x0606
+#define CFW_VER_MINOR   0x0110
+
 #else
 #error systemctrl_patch_list.h
 #endif

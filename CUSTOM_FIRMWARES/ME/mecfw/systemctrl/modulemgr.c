@@ -174,6 +174,28 @@ int PartitionCheckPatched(u32 *st0, u32 *check)
 #define ModuleMgrInitKeyConfigAddr			0x000099FC//0x000099FC
 #define ModuleMgrInitBootDeviceAddr			0x00004DDC//0x00004DDC
 
+#elif _PSP_FW_VERSION == 661
+#define ModuleMgrCheckExecFilePatchAddr		0x00008884
+#define ModuleMgrLoadModuleUserPatchAddr1	0x00000760
+#define ModuleMgrLoadModuleUserPatchAddr2	0x000007C0
+#define ModuleMgrLoadModuleVshPatchAddr1	0x000030B0
+#define ModuleMgrLoadModuleVshPatchAddr2	0x0000310C
+#define ModuleMgrLoadModuleVshPatchAddr3	0x00003138
+#define ModuleMgrLoadModuleKernelPatchAddr1	0x00003444
+#define ModuleMgrLoadModuleKernelPatchAddr2	0x0000349C
+#define ModuleMgrLoadModuleKernelPatchAddr3	0x000034C8
+#define ModuleMgrPartitionCheckPatchAddr1	0x0000651C//0x00006528
+#define ModuleMgrPartitionCheckPatchAddr2	0x00006898//0x000068A4
+#define ModuleMgrPartitionCheckFuncAddr		0x00007FD0//0x00007FDC
+#define ModuleMgrPrologueModulePatchAddr	0x00007048//0x00007054
+#define ModuleMgrPrologueModuleFuncAddr		0x00008124//0x00008130
+#define ModuleMgrCreateThreadPatchAddr		0x0000895C//0x00008968
+#define ModuleMgrStartThreadPatchAddr		0x000089A4//0x000089B0
+#define ModuleMgrInitApitypeAddr			0x000099A0//0x000099A0
+#define ModuleMgrInitFileNameAddr			0x000099A4//0x000099A4
+#define ModuleMgrInitKeyConfigAddr			0x000099FC//0x000099FC
+#define ModuleMgrInitBootDeviceAddr			0x00004DDC//0x00004DDC
+
 #else
 #error modulemgr
 #endif

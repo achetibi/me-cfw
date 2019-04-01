@@ -20,6 +20,12 @@
 	STUB_FUNC 0xF153B371, sceKernelQuerySystemCall
 	STUB_END
 
+#elif _PSP_FW_VERSION == 661
+	STUB_START "InterruptManagerForKernel", 0x00010011, 0x00020005
+	STUB_FUNC 0x0C5F7AE3, sceKernelCallSubIntrHandler
+	STUB_FUNC 0xF153B371, sceKernelQuerySystemCall
+	STUB_END
+
 #else
 #error interruptmgr.S
 #endif

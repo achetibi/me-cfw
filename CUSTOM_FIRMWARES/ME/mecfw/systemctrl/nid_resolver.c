@@ -31,7 +31,7 @@ u32 FindPowerFunction(u32 nid);
 #elif _PSP_FW_VERSION == 639
 #include "nid_resolver63x.h"
 
-#elif _PSP_FW_VERSION == 660
+#elif _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 #include "nid_resolver66x.h"
 
 #else

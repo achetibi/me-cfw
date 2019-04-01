@@ -31,7 +31,7 @@ int MemlmdSigcheckPatched(void *buf,int size,int flag)
 
 	if(head->signature == 0x5053507E)//PSP~
 	{
-#if _PSP_FW_VERSION == 660
+#if _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 		for(i=0;i<0x30;i++)
 #else
 		for(i=0;i<0x38;i++)
@@ -255,6 +255,28 @@ void PatchMemlmd()
 #define MemlmdPatchAddr4	0x0000105C
 #endif
 
+#elif _PSP_FW_VERSION == 661
+#if PSP_MODEL == 0
+//#define MemlmdTagPatchAddr	0x000013F0
+#define MemlmdSetSeedAddr	0x000012B8
+#define MemlmdSigcheckAddr	0x00001070
+#define MemlmdPatchAddr1	0x00001238
+#define MemlmdPatchAddr2	0x0000128C
+#define MemlmdDecryptAddr	0x0000020C
+#define MemlmdPatchAddr3	0x00000F70
+#define MemlmdPatchAddr4	0x00000FD4
+
+#else
+//#define MemlmdTagPatchAddr	0x000014B0
+#define MemlmdSetSeedAddr	0x00001340
+#define MemlmdSigcheckAddr	0x000010F8
+#define MemlmdPatchAddr1	0x000012C0
+#define MemlmdPatchAddr2	0x00001314
+#define MemlmdDecryptAddr	0x0000020C
+#define MemlmdPatchAddr3	0x00000FF8
+#define MemlmdPatchAddr4	0x0000105C
+#endif
+
 #else
 #error decryptcore_memlmd
 #endif
@@ -392,6 +414,33 @@ void PatchMesgLed()
 #endif
 
 #elif _PSP_FW_VERSION == 660
+#if PSP_MODEL == 0 //01g
+#define MesgLedDecryptPatchAddr1	0x00002114
+#define MesgLedDecryptPatchAddr2	0x00001ED0
+#define MesgLedDecryptPatchAddr3	0x00003FD8
+#define MesgLedDecryptPatchAddr4	0x00004164
+#define MesgLedDecryptPatchAddr5	0x0000335C
+#elif PSP_MODEL == 1 //02g
+#define MesgLedDecryptPatchAddr1	0x000021C4
+#define MesgLedDecryptPatchAddr2	0x00001EDC
+#define MesgLedDecryptPatchAddr3	0x00004548
+#define MesgLedDecryptPatchAddr4	0x000046D4
+#define MesgLedDecryptPatchAddr5	0x0000373C
+#elif PSP_MODEL == 2 //(PSP_MODEL == 2 || PSP_MODEL == 3 ||  PSP_MODEL == 6 ||  PSP_MODEL == 8)//03g
+#define MesgLedDecryptPatchAddr1	0x00002254
+#define MesgLedDecryptPatchAddr2	0x00001EDC
+#define MesgLedDecryptPatchAddr3	0x00004A70
+#define MesgLedDecryptPatchAddr4	0x00004BFC
+#define MesgLedDecryptPatchAddr5	0x00003ADC
+#elif PSP_MODEL == 4 //05g
+#define MesgLedDecryptPatchAddr1	0x000022EC
+#define MesgLedDecryptPatchAddr2	0x00001EE0
+#define MesgLedDecryptPatchAddr3	0x00004F44
+#define MesgLedDecryptPatchAddr4	0x000050D0
+#define MesgLedDecryptPatchAddr5	0x00003E48
+#endif
+
+#elif _PSP_FW_VERSION == 661
 #if PSP_MODEL == 0 //01g
 #define MesgLedDecryptPatchAddr1	0x00002114
 #define MesgLedDecryptPatchAddr2	0x00001ED0

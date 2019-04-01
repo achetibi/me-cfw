@@ -197,6 +197,23 @@ static void PatchLoadExec(SceModule2 *mod)
 #define LoadExecVSH_Patch_Addr2		0x00002668
 #endif
 
+#elif _PSP_FW_VERSION == 661
+#if PSP_MODEL != 4
+#define LOADEXEC_JUMP_PATCH			0x00002DA8
+#define LOADEXEC_REBOOT_PATCH_ADDR	0x00002D5C
+#define ExitVSHVSH_Patch_Addr1		0x000016A4
+#define ExitVSHVSH_Patch_Addr2		0x000016D8
+#define LoadExecVSH_Patch_Addr1		0x000023D0
+#define LoadExecVSH_Patch_Addr2		0x00002414
+#else
+#define LOADEXEC_JUMP_PATCH			0x00002FF4
+#define LOADEXEC_REBOOT_PATCH_ADDR	0x00002FA8
+#define ExitVSHVSH_Patch_Addr1		0x000016A4
+#define ExitVSHVSH_Patch_Addr2		0x000016D8
+#define LoadExecVSH_Patch_Addr1		0x00002624
+#define LoadExecVSH_Patch_Addr2		0x00002668
+#endif
+
 #else
 #error syspatch.c @ PatchLoadExec
 #endif
@@ -281,6 +298,16 @@ static void PatchMediaSync(u32 text_addr )
 #define MediaSyncDiscAssignPatchAddr	0x000001C0
 
 #elif _PSP_FW_VERSION == 660
+#define MediaSyncBlacklistAddr			0x000000C8
+#define MediaSyncSfoErrorPatch1			0x00000864
+#define MediaSyncSfoErrorPatch2			0x00000988
+#define MediaSyncExtraMemoryPatchAddr	0x0000097C
+#define MediaSyncExtraMemoryPatchFunc	0x00000F40
+#define MediaSyncDiscSfoPatchAddr1		0x000003C4
+#define MediaSyncDiscSfoPatchAddr2		0x00000DC8
+#define MediaSyncDiscAssignPatchAddr	0x000001C0
+
+#elif _PSP_FW_VERSION == 661
 #define MediaSyncBlacklistAddr			0x000000C8
 #define MediaSyncSfoErrorPatch1			0x00000864
 #define MediaSyncSfoErrorPatch2			0x00000988
@@ -477,6 +504,9 @@ static void PatchPower(u32 text_addr)
 #elif _PSP_FW_VERSION == 660
 #define POWER_PATCH_ADDR	0x00000E68
 
+#elif _PSP_FW_VERSION == 661
+#define POWER_PATCH_ADDR	0x00000E68
+
 #else
 #error syspatch.c @ PatchPower
 #endif
@@ -494,6 +524,9 @@ static void PatchWlan( u32 buf)
 #define WLAN_PATCH_ADDR	0x000026C0
 
 #elif _PSP_FW_VERSION == 660
+#define WLAN_PATCH_ADDR	0x000026C0
+
+#elif _PSP_FW_VERSION == 661
 #define WLAN_PATCH_ADDR	0x000026C0
 
 #else
@@ -530,6 +563,9 @@ static void PatchUmdMan( u32 text_addr )
 #define UMDMAN_PATCH_ADDR	0x0000431C
 
 #elif _PSP_FW_VERSION == 660
+#define UMDMAN_PATCH_ADDR	0x0000431C
+
+#elif _PSP_FW_VERSION == 661
 #define UMDMAN_PATCH_ADDR	0x0000431C
 
 #else
@@ -576,6 +612,9 @@ static void NpSignupPluginPatch(u32 text_addr)
 #elif _PSP_FW_VERSION == 660
 #define NpSignupPlugin_PatchAddr	0x00038CBC
 
+#elif _PSP_FW_VERSION == 661
+#define NpSignupPlugin_PatchAddr	0x00038CBC
+
 #else
 #error syspatch.c @ NpSignupPluginPatch
 #endif
@@ -594,6 +633,10 @@ static void VshNpSigninPatch(u32 text_addr)
 #define VshNpSignin_PatchAddr2	0x00009684
 
 #elif _PSP_FW_VERSION == 660
+#define VshNpSignin_PatchAddr1	0x00006CF4
+#define VshNpSignin_PatchAddr2	0x000096C4
+
+#elif _PSP_FW_VERSION == 661
 #define VshNpSignin_PatchAddr1	0x00006CF4
 #define VshNpSignin_PatchAddr2	0x000096C4
 
@@ -880,6 +923,10 @@ int Patch_Init(int (* real_init)(),  u32 a1)//init patch
 #define InitStartModuleAddr	0x00001CBC
 
 #elif _PSP_FW_VERSION == 660
+#define InitStartAddr		0x00001A4C
+#define InitStartModuleAddr	0x00001C3C
+
+#elif _PSP_FW_VERSION == 661
 #define InitStartAddr		0x00001A4C
 #define InitStartModuleAddr	0x00001C3C
 

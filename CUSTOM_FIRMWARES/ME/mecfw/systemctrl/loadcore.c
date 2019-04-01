@@ -321,6 +321,37 @@ int ProbeExec2Patched(u8 *buf, u32 *check)
 #define LoadcoreMemlmdDecryptFixAddr1			0x00003E70
 #define LoadcoreMemlmdDecryptFixAddr2			0x00005970
 
+#elif _PSP_FW_VERSION == 661
+#define LoadcoreCheckExecFuncAddr				0x00003FAC
+//#define LoadcoreCheckExecFuncPatchAddr			0x00007B5C
+//#define LoadcoreCheckExecPatchAddr1				0x000011F0
+//#define LoadcoreCheckExecPatchAddr2				0x00001240
+//#define LoadcoreCheckExecPatchAddr3				0x000048B4
+#define LoadcoreLocationPatchOffset				0x00007F94
+#define LoadcoreLinkLibraryPatchAddr			0x0000111C
+#define LoadcoreLinkLibraryUserPatchAddr1		0x00002590
+#define LoadcoreLinkLibraryUserPatchAddr2		0x000025B8
+#define LoadcoreLinkLibraryFuncAddr				0x00003080
+#define LoadcoreProbeExec1PatchAddr				0x000044B0
+#define LoadcoreProbeExec1FuncAddr				0x00006468
+#define LoadcoreProbeExec2PatchAddr1			0x000046B0
+//#define LoadcoreProbeExec2PatchAddr2			0x000066D4
+#define LoadcoreProbeExec2FuncAddr				0x000063C0
+#define LoadcoreSyscallStubPatchAddr			0x00003D70
+#define LoadcoreModuleSdkVersionCheckPatch1		0x000073A4
+#define LoadcoreModuleSdkVersionCheckPatch2		0x00006BA4
+#define LoadcoreTagCheckPatchAddr1				0x00005900
+#define LoadcoreTagCheckPatchAddr2				0x00005A10
+#define LoadcoreTagCheckPatchAddr3				0x00005AA8
+#define LoadcoreInitPatchAddr					0x00001A28
+#define LoadcoreMemlmdSigcheckNid				0x6192F715
+#define LoadcoreMemlmdSigcheckFixAddr1			0x00005994
+#define LoadcoreMemlmdSigcheckFixAddr2			0x000059C4
+#define LoadcoreMemlmdSigcheckFixAddr3			0x00005A5C
+#define LoadcoreMemlmdDecryptNid				0xEF73E85B
+#define LoadcoreMemlmdDecryptFixAddr1			0x00003E70
+#define LoadcoreMemlmdDecryptFixAddr2			0x00005970
+
 #else
 #error loadcore
 #endif

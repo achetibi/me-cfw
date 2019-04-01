@@ -50,6 +50,22 @@
 	STUB_FUNC 0xFC639A2B, sceKernelSetQTGP3
 	STUB_END
 
+#elif _PSP_FW_VERSION == 661
+	STUB_START "SysMemForKernel", 0x00010011, 0x000C0005
+	STUB_FUNC 0x58148F07, sceKernelCreateHeap
+	STUB_FUNC 0x01810023, sceKernelHeapTotalFreeSize
+	STUB_FUNC 0x23D81675, sceKernelAllocHeapMemory
+	STUB_FUNC 0x87C2AB85, sceKernelFreeHeapMemory
+	STUB_FUNC 0xDD6512D0, sceKernelDeleteHeap
+	STUB_FUNC 0x36C503A9, sceKernelGetSystemStatus
+	STUB_FUNC 0x83B5226D, sceKernelSetDdrMemoryProtection
+	STUB_FUNC 0x07C586A1, sceKernelGetModel
+	STUB_FUNC 0x7158CE7E, sceKernelAllocPartitionMemory
+	STUB_FUNC 0xF12A62F7, sceKernelGetBlockHeadAddr
+	STUB_FUNC 0xC886B169, sceKernelDevkitVersion
+	STUB_FUNC 0xFC639A2B, sceKernelSetQTGP3
+	STUB_END
+
 #else
 #error sysmem.s
 #endif

@@ -20,6 +20,12 @@
 	IMPORT_FUNC	"LoadCoreForKernel",0xBC99C625,sceKernelFindModuleByAddress
 	IMPORT_FUNC	"LoadCoreForKernel",0x40972E6E,sceKernelFindModuleByUID
 
+#elif _PSP_FW_VERSION == 661
+	IMPORT_START	"LoadCoreForKernel",0x00010000
+	IMPORT_FUNC	"LoadCoreForKernel",0xF6B1BF0F,sceKernelFindModuleByName
+	IMPORT_FUNC	"LoadCoreForKernel",0xBC99C625,sceKernelFindModuleByAddress
+	IMPORT_FUNC	"LoadCoreForKernel",0x40972E6E,sceKernelFindModuleByUID
+
 #else
 #error loadcore.S
 #endif

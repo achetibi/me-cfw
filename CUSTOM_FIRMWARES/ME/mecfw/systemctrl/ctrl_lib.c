@@ -39,6 +39,16 @@ static const struct sctrlLibFunc lib_list = {
 	.LoadExecVshFuncAddr_05g	= 0x000025D8,
 	.FatfsDeviceFlagAddr		= 0x0000E74C,
 };
+#elif _PSP_FW_VERSION == 661
+static const struct sctrlLibFunc lib_list = {
+	.GetPartitionInfoFuncAddr	= 0x00003D28,
+	.FindDriverFuncAddr			= 0x00002A4C,
+	.SetUserLevelPatchAddr		= 0x00019F40,
+	.SetDevkitPatchAddr			= 0x0001191C,
+	.LoadExecVshFuncAddr		= 0x00002384,
+	.LoadExecVshFuncAddr_05g	= 0x000025D8,
+	.FatfsDeviceFlagAddr		= 0x0000E74C,
+};
 
 #else
 #error ctrl_lib

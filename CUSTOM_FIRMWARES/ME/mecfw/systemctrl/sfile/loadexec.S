@@ -38,6 +38,18 @@
 	STUB_FUNC 0x032A7938, sceKernelLoadExecVSHEf2
 	STUB_END
 
+#elif _PSP_FW_VERSION == 661
+	STUB_START "LoadExecForKernel", 0x00090011, 0x00080005
+	STUB_FUNC 0x08F7166C, sceKernelExitVSHVSH
+	STUB_FUNC 0xD8320A28, sceKernelLoadExecVSHDisc
+	STUB_FUNC 0xD4B49C4B, sceKernelLoadExecVSHDiscUpdater
+	STUB_FUNC 0x4FB44D27, sceKernelLoadExecVSHMs1
+	STUB_FUNC 0xD940C83C, sceKernelLoadExecVSHMs2
+	STUB_FUNC 0xCC6A47D2, sceKernelLoadExecVSHMs3
+	STUB_FUNC 0x00745486, sceKernelLoadExecVSHMs4
+	STUB_FUNC 0x032A7938, sceKernelLoadExecVSHEf2
+	STUB_END
+
 #else
 #error loadexec.S
 #endif
