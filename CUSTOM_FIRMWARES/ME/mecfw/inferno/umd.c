@@ -281,7 +281,7 @@ int sceUmdMan_driver_4FFAB8DA(u32 a0, u32 a1, u32 a2)
 	intr = 0x00001021; // move $v0, $zr
 
 	for(i = 0; i < NELEMS(g_offsets.patches); ++i) {
-		_sw(intr, g_offsets.patches[i] + mod->text_addr);
+		_sw(intr, mod->text_addr + g_offsets.patches[i]);
 	}
 
 	sceKernelIcacheInvalidateAll();

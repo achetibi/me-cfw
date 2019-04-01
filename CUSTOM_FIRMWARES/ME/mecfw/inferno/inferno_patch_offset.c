@@ -19,7 +19,17 @@
 
 #include "inferno_patch_offset.h"
 
-#if _PSP_FW_VERSION == 660
+#if _PSP_FW_VERSION == 661
+PatchOffset g_offsets = {
+	.patches = {
+		0x00003FEC,
+		0x00004024,
+		0x000040D8,
+		0x000042B4,
+	},
+};
+
+#elif _PSP_FW_VERSION == 660
 PatchOffset g_offsets = {
 	.patches = {
 		0x00003FEC,
