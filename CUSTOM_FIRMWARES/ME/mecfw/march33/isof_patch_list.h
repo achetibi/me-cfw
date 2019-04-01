@@ -32,6 +32,14 @@ static const struct Isof_list isof_patch_list = {
 	.IsofPatchAddr4 = 0x000042B4,//0x000042E8,
 };
 
+#elif _PSP_FW_VERSION == 661
+static const struct Isof_list isof_patch_list = {
+	.IsofPatchAddr1 = 0x00003FEC,//0x00004020,
+	.IsofPatchAddr2 = 0x00004024,//0x00004058,
+	.IsofPatchAddr3 = 0x000040D8,//0x0000410C,
+	.IsofPatchAddr4 = 0x000042B4,//0x000042E8,
+};
+
 #else
 #error FW error
 #endif
