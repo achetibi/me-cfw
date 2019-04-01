@@ -53,7 +53,7 @@ int scePower_A85880D0_Patched(void)
 
 void patch_for_old_fw(SceModule *mod)
 {
-#if _PSP_FW_VERSION != 660
+#if _PSP_FW_VERSION < 660
 	sctrlHookImportByNid(mod, "SysMemUserForUser", 0x358CA1BB, &SysMemUserForUser_1B4217BC_Patched, 1);
 #endif
 

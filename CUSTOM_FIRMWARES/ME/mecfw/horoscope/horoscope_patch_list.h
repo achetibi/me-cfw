@@ -79,6 +79,23 @@ static const struct AddrList horoscope_list = {
 	},
 	.LoadModuleMs2HookAddr = 0x00001C64,//0x00001C44,
 };
+
+#elif _PSP_FW_VERSION == 661
+static const struct AddrList horoscope_list = {
+	.init_list = {
+		.GetGameInfoPatchAddr	= 0x000016D8,
+		.GetGameInfoFuncAddr	= 0x00001D64,//0x00001D04,
+		.ModuleStrInPatchAddr	= 0x000016DC,
+		.ModuleStrOutPatchAddr	= 0x000016E0,
+	},
+	.utility_list = {
+		.LoadModulePatchAddr	= 0x00004908,
+		.UnloadModulePatchAddr	= 0x000049D4,
+		.LoadModuleAddr			= 0x00003FA4,
+		.UnloadModuleAddr		= 0x00004078,
+	},
+	.LoadModuleMs2HookAddr = 0x00001C64,//0x00001C44,
+};
 #else
 #error Target PatchList is not found !
 #endif
