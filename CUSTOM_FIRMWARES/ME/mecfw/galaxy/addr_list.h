@@ -66,6 +66,22 @@ static const struct Galaxy_patch galaxy_patch_addr = {
 	.IsoInfoPatchAddr	= 0x00005BD8 - 0x00005BA4 + 0x00000188 + 0x00008900,
 	.CallbackFlagPatchAddr	= 0x00000114 + 0x00008900, // See 0x000033B0
 };
+#elif _PSP_FW_VERSION == 661
+static const struct Galaxy_patch galaxy_patch_addr = {
+	.InitFuncPatchAddr	= 0x00003C5C,
+	.IsoOpenPatchAddr	= 0x00003C78,
+	.IsoReadPatchAddr1	= 0x00004414,
+	.IsoReadPatchAddr2	= 0x0000596C,
+	.IsoClosePatchAddr	= 0x00007D68,
+	.UmdCheckMediumAddr	= 0x000036A8,
+	.UmdMutexLockAddr	= 0x00004FEC,
+	.UmdMutexUnlockAddr	= 0x0000505C,
+//	.CreateThreadPatchAddr	= 0x00019264,
+//	.StartThreadPatchAddr	= 0x00019408,
+	.IsoFdPatchAddr		= 0x00000188 + 0x00008900, // See 0x00004D98
+	.IsoInfoPatchAddr	= 0x00005BD8 - 0x00005BA4 + 0x00000188 + 0x00008900,
+	.CallbackFlagPatchAddr	= 0x00000114 + 0x00008900, // See 0x000033B0
+};
 #else
 #error FW error
 #endif
