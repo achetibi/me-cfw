@@ -40,7 +40,13 @@ void sub_01544 ( void )
 	}
 }
 
+#if _PSP_FW_VERSION == 660
 #define PBP_FILE "ms0:/660.PBP"
+#elif _PSP_FW_VERSION == 661
+#define PBP_FILE "ms0:/661.PBP"
+#else
+#error action.c
+#endif
 
 int check_pbp(const char *pbp, int size)
 {
@@ -69,7 +75,14 @@ int fw_install()
 	int ret = 0;
 	myDebugScreenClear();
 
-	int res = check_pbp(PBP_FILE, 0x01F19005);
+#if _PSP_FW_VERSION == 660
+    int res = check_pbp(PBP_FILE, 0x01F19005);
+#elif _PSP_FW_VERSION == 661
+    int res = check_pbp(PBP_FILE, 0x01F123C5);
+#else
+#error action.c
+#endif
+
 	if (res < 0)
 	{
 		ret = -1;

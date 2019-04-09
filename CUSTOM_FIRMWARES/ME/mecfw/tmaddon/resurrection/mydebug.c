@@ -197,7 +197,7 @@ void myDebugScreenPrintf(const char *format, ...)
    
    if(!init)
    {
-           return;
+       return;
    }
    
    va_start(opt, format);

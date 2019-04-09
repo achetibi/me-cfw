@@ -8,7 +8,13 @@
 
 #include "main.h"
 
-char recovery_title[] = "X.XX Unbricker Menu\n ";
+#if _PSP_FW_VERSION == 660
+char recovery_title[] = "6.60 Unbricker Menu\n ";
+#elif _PSP_FW_VERSION == 661
+char recovery_title[] = "6.61 Unbricker Menu\n ";
+#else
+#error menu.c
+#endif
 
 u32 select_color = 0x0000FF00;
 
@@ -35,10 +41,10 @@ void draw_init()
 	memset(stat_line,'*',sizeof(stat_line));
 	stat_line[68]='\0';
 
-	u32 version = sceKernelDevkitVersion();
-	recovery_title[0] = ( version >> 24) + '0';
-	recovery_title[2] = ((version >> 16)& 0xFF ) + '0';
-	recovery_title[3] = ((version >> 8 )& 0xFF ) + '0';
+	//u32 version = sceKernelDevkitVersion();
+	//recovery_title[0] = ( version >> 24) + '0';
+	//recovery_title[2] = ((version >> 16)& 0xFF ) + '0';
+	//recovery_title[3] = ((version >> 8 )& 0xFF ) + '0';
 }
 
 static void draw_statbox()

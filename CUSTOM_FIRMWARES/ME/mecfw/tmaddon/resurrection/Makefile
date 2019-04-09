@@ -14,7 +14,7 @@ OBJS = main.o menu.o lib.o mydebug.o action.o unpack.o nand.o
 OBJS += sfiles/scePower.o sfiles/DcManager.o sfiles/pspPSAR.o
 OBJS += sfiles/pspDecrypt.o sfiles/pspIplUpdate.o
 
-PSP_FW_VERSION = 660
+PSP_FW_VERSION = $(TARGET_FW)
 
 BUILD_PRX = 1
 
