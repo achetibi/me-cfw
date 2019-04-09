@@ -28,6 +28,7 @@ int dcUnlockNand();
 int dcReadNandBlock(u32 page, u8 *block);
 int dcWriteNandBlock(u32 page, u8 *user, u8 *spare);
 int dcEraseNandBlock(u32 page);
+void dcClearCache();
 void SW(u32 word, u32 address);
 u32  LW(u32 address);
 
