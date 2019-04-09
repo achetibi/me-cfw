@@ -22,6 +22,14 @@
 #define sceKernelPowerLockForUser_Offs				0x8800CBB8
 #define sceKernelPowerLockForUser_data_offset		0x000040F8
 
+#elif _PSP_FW_VERSION == 661
+#define sceKernelIcacheInvalidateAll_Offs			0x88000E98
+#define sceKernelDcacheWritebackInvalidateAll_Offs	0x88000744
+#define sceKernelFindModuleByName_Offs				0x8801DF98 // 0x00017000 + 0x00006F98
+#define sceKernelGetModel_Offs						0x8800A0B0
+#define sceKernelPowerLockForUser_Offs				0x8800CBB8
+#define sceKernelPowerLockForUser_data_offset		0x000040F8
+
 #else
 #error kxploit_offs.h
 #endif

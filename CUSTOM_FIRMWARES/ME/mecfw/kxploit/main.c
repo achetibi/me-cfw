@@ -1,12 +1,12 @@
 /*
 --- Message from J416 ---
 
-‚¿‚å‚Á‚Æ¨‚¢‚Å‘‚¢‚Ä‚Ý‚Ü‚µ‚½B
-liquidzigongŽ‚Ì6.39 KxploitƒTƒ“ƒvƒ‹‚ðƒx[ƒX(‚Æ‚¢‚¤‚©ŠÛƒpƒNƒŠ)‚ÉA
-ƒQ[ƒ€I—¹Žž‚Érebootex‚ðŽÀs‚·‚é‚æ‚¤‚É‚µ‚Ä‚Ý‚Ü‚µ‚½B
-‘½•ªA‚±‚ÌŒã6.39Œü‚¯‚Ìrebootex‚Æsystemctrl‘‚¯‚ÎHEN‚ª‚Å‚«‚é‚ÆŽv‚¢‚Ü‚·‚—
-EEEŽžŠÔ‚ ‚ê‚Î‚â‚Á‚Ä‚Ý‚æ‚¤‚©‚È‚ B
-‚ APSP1000—p‚ÅƒQ[ƒ€I—¹Žž‚É–³üLAN‚ÌLED‚ª“_“”‚·‚é‚±‚Æ‚ðŠm”F‚µ‚Ü‚µ‚½B
+ã¡ã‚‡ã£ã¨å‹¢ã„ã§æ›¸ã„ã¦ã¿ã¾ã—ãŸã€‚
+liquidzigongæ°ã®6.39 Kxploitã‚µãƒ³ãƒ—ãƒ«ã‚’ãƒ™ãƒ¼ã‚¹(ã¨ã„ã†ã‹ä¸¸ãƒ‘ã‚¯ãƒª)ã«ã€
+ã‚²ãƒ¼ãƒ çµ‚äº†æ™‚ã«rebootexã‚’å®Ÿè¡Œã™ã‚‹ã‚ˆã†ã«ã—ã¦ã¿ã¾ã—ãŸã€‚
+å¤šåˆ†ã€ã“ã®å¾Œ6.39å‘ã‘ã®rebootexã¨systemctrlæ›¸ã‘ã°HENãŒã§ãã‚‹ã¨æ€ã„ã¾ã™ï½—
+ãƒ»ãƒ»ãƒ»æ™‚é–“ã‚ã‚Œã°ã‚„ã£ã¦ã¿ã‚ˆã†ã‹ãªã‚ã€‚
+ã‚ã€PSP1000ç”¨ã§ã‚²ãƒ¼ãƒ çµ‚äº†æ™‚ã«ç„¡ç·šLANã®LEDãŒç‚¹ç¯ã™ã‚‹ã“ã¨ã‚’ç¢ºèªã—ã¾ã—ãŸã€‚
 
 Thanks liquidzigong and some1!
 */

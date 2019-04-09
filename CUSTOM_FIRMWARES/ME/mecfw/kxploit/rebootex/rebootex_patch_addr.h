@@ -206,6 +206,61 @@ static const struct AddrList rebootex_patch_list = {
 	},
 };
 
+#elif _PSP_FW_VERSION == 661
+static const struct AddrList rebootex_patch_list = {
+	.function_list_01g = {
+		.BootLfatOpen	= 0x8860B6C0, //OK
+		.BootLfatRead	= 0x8860AD58, //OK
+		.BootLfatClose	= 0x88609C78, //OK
+		.CheckPspConfig	= 0x8860574C,
+		.DcacheClearAddr= 0x88600890,
+		.IcacheClearAddr= 0x8860013C,
+	},
+	.patch_list_01g = {
+		.BootLfatOpenPatch	= 0x886027C4,
+		.BootLfatReadPatch	= 0x88602834,
+		.BootLfatClosePatch	= 0x88602860,
+		.CheckPspConfigPatch= 0x886070F8,
+		.KdebugPatchAddr	= 0x88603880,
+		.BtHeaderPatchAddr	= 0x88605780,
+		.LfatMountPatchAddr	= 0x886027BC,
+		.LfatSeekPatchAddr1	= 0x88602810,
+		.LfatSeekPatchAddr2	= 0x88602828,
+		.LoadCorePatchAddr	= 0x88605640,
+		.HashCheckPatchAddr	= 0x88607390,
+	},
+
+	.function_list_02g = {
+		.BootLfatOpen	= 0x8860B780, //OK
+		.BootLfatRead	= 0x8860AE18, //OK
+		.BootLfatClose	= 0x88609D38, //OK
+		.CheckPspConfig	= 0x8860580C,
+		.DcacheClearAddr= 0x88600890,
+		.IcacheClearAddr= 0x8860013C,
+	},
+	.patch_list_02g = {
+		.BootLfatOpenPatch	= 0x8860288C,
+		.BootLfatReadPatch	= 0x886028FC,
+		.BootLfatClosePatch	= 0x88602928,
+		.CheckPspConfigPatch= 0x886071B8,
+		.KdebugPatchAddr	= 0x88603948,
+		.BtHeaderPatchAddr	= 0x88605840,
+		.LfatMountPatchAddr	= 0x88602884,
+		.LfatSeekPatchAddr1	= 0x886028D8,
+		.LfatSeekPatchAddr2	= 0x886028F0,
+		.LoadCorePatchAddr	= 0x88605700,
+		.HashCheckPatchAddr	= 0x88607450,
+	},
+
+	.memlmd_list = {
+		.ModuleOffsetAddr	= 0x00000AF8,
+		.SigcheckPatchAddr	= 0x00005994,
+		.SigcheckFuncAddr	= 0x00007824,//memlmd_6192F715
+		.DecryptPatchAddr	= 0x00005970,
+		.DecryptFuncAddr	= 0x0000783C,//memlmd_EF73E85B
+	},
+};
+
 #else
 #error Target PatchList is not found !
 #endif

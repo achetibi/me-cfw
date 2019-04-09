@@ -55,7 +55,7 @@ void doKernelExploit(const char* msg)
 	}
 }
 
-#elif _PSP_FW_VERSION == 660
+#elif _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 
 void doKernelExploit(const char* msg)
 {

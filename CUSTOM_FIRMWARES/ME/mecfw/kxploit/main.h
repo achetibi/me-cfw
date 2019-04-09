@@ -14,6 +14,10 @@
 #elif _PSP_FW_VERSION == 660
 #define DEVKIT_VER	0x06060010
 #define VER_STR	"6.60"
+
+#elif _PSP_FW_VERSION == 661
+#define DEVKIT_VER	0x06060110
+#define VER_STR	"6.61"
 #endif
 
 extern void recovery_sysmem(void);

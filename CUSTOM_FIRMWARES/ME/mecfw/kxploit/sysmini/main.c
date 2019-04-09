@@ -326,7 +326,7 @@ int loc_00000348(void *buf,int u,int flag)
 
 	if(head->signature == 0x5053507E)
 	{
-#if _PSP_FW_VERSION == 660
+#if _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 		for(i=0;i<0x30;i++)
 #else
 		for(i=0;i<0x38;i++)

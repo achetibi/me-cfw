@@ -2,7 +2,7 @@
 
 #define ___MAIN_H___
 
-#define CFW_VERSION "6.60"
+//#define CFW_VERSION "6.60"
 
 #define JAL_OPCODE	0x0C000000
 #define J_OPCODE	0x08000000
