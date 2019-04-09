@@ -210,7 +210,7 @@ int memlmd_3F2AC9C6_patched(void *a0,int size)
 	PSP_Header *head=(PSP_Header *)a0;
 	int i;
 
-#if _PSP_FW_VERSION == 660
+#if _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 	for(i=0;i<0x30;i++)
 #else
 	for(i=0;i<0x38;i++)
