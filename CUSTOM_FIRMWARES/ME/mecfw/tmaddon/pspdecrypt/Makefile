@@ -18,7 +18,7 @@ CFLAGS = -O2 -G0 -Wall -fno-pic
 CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti
 ASFLAGS = $(CFLAGS)
 
-PSP_FW_VERSION = 271
+PSP_FW_VERSION = $(TARGET_FW)
 
 BUILD_PRX = 1
 PRX_EXPORTS = exports.exp
