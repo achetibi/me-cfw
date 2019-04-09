@@ -36,8 +36,11 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER | THREAD_ATTR_VFPU);
 #elif _PSP_FW_VERSION == 660
 #define PBP_URL "/2011_0810_2ca64d59dcf48f45fb99b400a586b395"
 #define SAVE_PATH "ms0:/PSP/GAME/UPDATE/660.PBP"
-#endif
 
+#elif _PSP_FW_VERSION == 661
+#define PBP_URL "/2014_1212_6be8878f475ac5b1a499b95ab2f7d301"
+#define SAVE_PATH "ms0:/PSP/GAME/UPDATE/661.PBP"
+#endif
 
 int start_download(char *url , char *path , char* flag);
 int sceDisplaySetHoldMode(int a0);

@@ -33,6 +33,10 @@
 #elif _PSP_FW_VERSION == 660
 #define UPDATE_PATH "ms0:/PSP/GAME/UPDATE/660.PBP"
 //int ipl_size = 0x20000; // 131072
+
+#elif _PSP_FW_VERSION == 661
+#define UPDATE_PATH "ms0:/PSP/GAME/UPDATE/661.PBP"
+//int ipl_size = 0x1F000; // 126976
 #endif
 
 int ipl_size = 0x20000; // 131072
