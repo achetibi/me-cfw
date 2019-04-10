@@ -22,12 +22,10 @@ int (* Real_Reboot)(void *a0, void *a1, void *a2, void *a3, void *t0, void *t1, 
 
 #if PSP_MODEL == 0
 #define SYSTEMCTRL_PATH "systemctrl_01g.prx"
+
 #elif PSP_MODEL == 1
 #define SYSTEMCTRL_PATH "systemctrl_02g.prx"
-/*
-#elif PSP_MODEL == 2//03g
-#define SYSTEMCTRL_PATH "systemctrl_03g.prx"
-*/
+
 #elif PSP_MODEL == 4
 #define SYSTEMCTRL_PATH "systemctrl_05g.prx"
 #endif
