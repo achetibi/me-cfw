@@ -41,9 +41,13 @@ void sub_01544 ( void )
 }
 
 #if _PSP_FW_VERSION == 660
-#define PBP_FILE "ms0:/660.PBP"
+#define EBOOT_PATH "ms0:/660.PBP"
+#define EBOOT_SIZE 0x01F19005
+
 #elif _PSP_FW_VERSION == 661
-#define PBP_FILE "ms0:/661.PBP"
+#define EBOOT_PATH "ms0:/661.PBP"
+#define EBOOT_SIZE 0x01F123C5
+
 #else
 #error action.c
 #endif
@@ -75,14 +79,7 @@ int fw_install()
 	int ret = 0;
 	myDebugScreenClear();
 
-#if _PSP_FW_VERSION == 660
-    int res = check_pbp(PBP_FILE, 0x01F19005);
-#elif _PSP_FW_VERSION == 661
-    int res = check_pbp(PBP_FILE, 0x01F123C5);
-#else
-#error action.c
-#endif
-
+    int res = check_pbp(EBOOT_PATH, EBOOT_SIZE);
 	if (res < 0)
 	{
 		ret = -1;
@@ -92,7 +89,7 @@ int fw_install()
 	else
 	{
 		dcSetCancelMode(1);
-		install_fw(PBP_FILE, ofw);
+		install_fw(EBOOT_PATH, ofw);
 		dcSetCancelMode(0);
 
 		sub_01544();
