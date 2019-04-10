@@ -10,7 +10,7 @@ TARGET = installer
 OBJS = main.o menu.o lib.o action.o iplloader.o unpack.o
 OBJS += sfiles/pspPSAR.o sfiles/pspDecrypt.o sfiles/DcManager.o
 
-PSP_FW_VERSION = 371
+PSP_FW_VERSION = $(TARGET_FW)
 
 BUILD_PRX = 1
 

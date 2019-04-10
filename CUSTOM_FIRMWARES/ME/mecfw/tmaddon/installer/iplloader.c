@@ -1,7 +1,7 @@
 #include <pspkernel.h>
 
 #include "action.h"
-#include "data/tm_ipl_bin.h"
+#include "data/ipl_tm_bin.h"
 
 #define STR_OK "OK\n"
 
@@ -71,7 +71,7 @@ void install_iplloader()
 			else
 			{
 				sceIoLseek(fd, 0x2000, 0);
-				sceIoWrite(fd, ipl, sizeof(ipl));
+				sceIoWrite(fd, ipl_tm, sizeof(ipl_tm));
 				sceIoClose(fd);
 
 				pspDebugScreenPrintf(STR_OK);

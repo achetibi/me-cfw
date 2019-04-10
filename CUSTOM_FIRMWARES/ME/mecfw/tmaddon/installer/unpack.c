@@ -41,7 +41,7 @@
 #include "data/ipl_update_bin.h"
 #include "data/pspbtdnf_bin.h"
 #include "data/pspbtdnf_02g_bin.h"
-#include "data/tmctrl660_bin.h"
+#include "data/tmctrl_bin.h"
 #include "data/ipl_bin.h"
 #include "data/config_bin.h"
 
@@ -54,6 +54,7 @@ typedef struct Module
 
 #define N_FILES 25
 
+#if _PSP_FW_VERSION == 660
 static const Module modules[N_FILES] = 
 {
 	{ "/kd/usbdev.prx", usbdevice, sizeof(usbdevice) },
@@ -78,10 +79,43 @@ static const Module modules[N_FILES] =
 	{ "/kd/ipl_update.prx", ipl_update, sizeof(ipl_update) },
 	{ "/kd/pspbtdnf.bin", pspbtdnf , sizeof(pspbtdnf) },
 	{ "/kd/pspbtdnf_02g.bin", pspbtdnf_02g , sizeof(pspbtdnf_02g) },
-	{ "/tmctrl660.prx", tmctrl660, sizeof(tmctrl660) },
+	{ "/tmctrl660.prx", tmctrl, sizeof(tmctrl) },
 	{ "/ipl.bin", ipl, sizeof(ipl) },
 	{ "/config.me", config, sizeof(config) }
 };
+
+#elif _PSP_FW_VERSION == 661
+static const Module modules[N_FILES] =
+{
+	{ "/kd/usbdev.prx", usbdevice, sizeof(usbdevice) },
+	{ "/vsh/module/satellite.prx", satellite, sizeof(satellite) },
+	{ "/vsh/module/recovery.prx", recovery, sizeof(recovery) },
+	{ "/vsh/module/resurrection.prx", resurrection , sizeof(resurrection) },
+	{ "/kd/dax9660.prx", dax9660, sizeof(dax9660) },
+	{ "/kd/isotope.prx", isotope, sizeof(isotope) },
+	{ "/kd/inferno.prx", inferno, sizeof(inferno) },
+	{ "/kd/idmanager.prx", idmanager, sizeof(idmanager) },
+	{ "/kd/pulsar.prx", pulsar, sizeof(pulsar) },
+	{ "/kd/horoscope.prx", horoscope, sizeof(horoscope) },
+	{ "/kd/vshctrl_02g.prx", vshctrl, sizeof(vshctrl) },
+	{ "/kd/pspbtjnf.bin", pspbtjnf_01g , sizeof(pspbtjnf_01g) },
+	{ "/kd/pspbtjnf_02g.bin", pspbtjnf_02g , sizeof(pspbtjnf_02g) },
+	{ "/kd/systemctrl_01g.prx", systemctrl_01g, sizeof(systemctrl_01g) },
+	{ "/kd/systemctrl_02g.prx", systemctrl_02g, sizeof(systemctrl_02g) },
+	{ "/kd/libpsardumper.prx", libpsardumper, sizeof(libpsardumper) },
+	{ "/kd/pspdecrypt.prx", pspdecrypt , sizeof(pspdecrypt) },
+	{ "/kd/dcman.prx", dcman, sizeof(dcman) },
+	{ "/kd/iop.prx", iop, sizeof(iop) },
+	{ "/kd/ipl_update.prx", ipl_update, sizeof(ipl_update) },
+	{ "/kd/pspbtdnf.bin", pspbtdnf , sizeof(pspbtdnf) },
+	{ "/kd/pspbtdnf_02g.bin", pspbtdnf_02g , sizeof(pspbtdnf_02g) },
+	{ "/tmctrl661.prx", tmctrl, sizeof(tmctrl) },
+	{ "/ipl.bin", ipl, sizeof(ipl) },
+	{ "/config.me", config, sizeof(config) }
+};
+#else
+#error devkit_ver
+#endif
 
 typedef struct UpdaterModule
 {
@@ -93,13 +127,48 @@ typedef struct UpdaterModule
 
 #define N_UPD_FILES 3
 
+#if _PSP_FW_VERSION == 660
+#define EMC_SM_UPDATER_OFFS 0x00030200
+#define EMC_SM_UPDATER_SIZE 0x000039D0
+#define EMC_SM_UPDATER_TYPE 0x00000001
+#define LFATFS_UPDATER_OFFS 0x00021880
+#define LFATFS_UPDATER_SIZE 0x0000E970
+#define LFATFS_UPDATER_TYPE 0x00000001
+#define LFLASH_FATFMT_UPDATER_OFFS 0x004E6380
+#define LFLASH_FATFMT_UPDATER_SIZE 0x000028A0
+#define LFLASH_FATFMT_UPDATER_TYPE 0x00000000
+#define CONFIG_DATA "L = \"/TM/660/ipl.bin\";"
+#define EBOOT_SIZE 0x01F19005
+#define EBOOT_PATH "ms0:/660.PBP"
+#define INSTALL_PATH "ms0:/TM/660"
+
+#elif _PSP_FW_VERSION == 661
+#define EMC_SM_UPDATER_OFFS 0x00030200
+#define EMC_SM_UPDATER_SIZE 0x000039D0
+#define EMC_SM_UPDATER_TYPE 0x00000001
+#define LFATFS_UPDATER_OFFS 0x00021880
+#define LFATFS_UPDATER_SIZE 0x0000E970
+#define LFATFS_UPDATER_TYPE 0x00000001
+#define LFLASH_FATFMT_UPDATER_OFFS 0x004E6380
+#define LFLASH_FATFMT_UPDATER_SIZE 0x000028A0
+#define LFLASH_FATFMT_UPDATER_TYPE 0x00000000
+#define BOOT_CONFIG_KEY "L = \"/TM/661/ipl.bin\";"
+#define EBOOT_SIZE 0x01F123C5
+#define EBOOT_PATH "ms0:/661.PBP"
+#define INSTALL_PATH "ms0:/TM/661"
+
+#else
+#error devkit_ver
+#endif
+
 static const UpdaterModule updatermodule[N_UPD_FILES] = 
 {
-	{ "/kd/emc_sm_updater.prx",			0x00030200, 0x000039D0, 1 },
-	{ "/kd/lfatfs_updater.prx",			0x00021880, 0x0000E970, 1 },
-	{ "/kd/lflash_fatfmt_updater.prx",	0x004E6380, 0x000028A0, 0 }
+	{ "/kd/emc_sm_updater.prx",			EMC_SM_UPDATER_OFFS, EMC_SM_UPDATER_SIZE, EMC_SM_UPDATER_TYPE },
+	{ "/kd/lfatfs_updater.prx",			LFATFS_UPDATER_OFFS, LFATFS_UPDATER_SIZE, LFATFS_UPDATER_TYPE },
+	{ "/kd/lflash_fatfmt_updater.prx",	LFLASH_FATFMT_UPDATER_OFFS, LFLASH_FATFMT_UPDATER_SIZE, LFLASH_FATFMT_UPDATER_TYPE }
 };
 
+#define CONFIG_TXT "ms0:/TM/config.txt"
 #define SMALL_BUFFER_SIZE	2100000
 int BIG_BUFFER_SIZE;
 
@@ -674,9 +743,7 @@ void start_unpack(const char *update_path, const char *install_dir, int update_s
 		sceKernelDelayThread(5*1000);
 	}
 
-#define CONFIG_TXT "ms0:/TM/config.txt"
-
-	char *conf = "L = \"/TM/660/ipl.bin\";";
+	char *conf = BOOT_CONFIG_KEY;
 
 	memset(str, 0, sizeof(str));
 
@@ -717,7 +784,7 @@ void unpack()
 	pspDebugScreenClear();
 	pspDebugScreenSetTextColor(0x0000FF00);
 
-	start_unpack ("ms0:/660.PBP", "ms0:/TM/660", 0x01F19005);
+	start_unpack (EBOOT_PATH, INSTALL_PATH, EBOOT_SIZE);
 
 	sub_01544();
 	pspDebugScreenClear();
