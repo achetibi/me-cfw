@@ -6,6 +6,7 @@ all:
 	make -C rebootex TARGET_FW=$(TARGET_FW) PSP_MODEL=0
 	make -C rebootex TARGET_FW=$(TARGET_FW) PSP_MODEL=1
 	make -C tmctrl TARGET_FW=$(TARGET_FW)
+	make -C custom_ipl TARGET_FW=$(TARGET_FW)
 	make -C installer TARGET_FW=$(TARGET_FW)
 
 clean:
@@ -15,4 +16,5 @@ clean:
 	make -C resurrection clean
 	make -C rebootex clean
 	make -C tmctrl clean
+	make -C custom_ipl clean
 	make -C installer clean
