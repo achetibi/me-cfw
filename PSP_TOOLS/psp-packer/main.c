@@ -57,7 +57,7 @@ void GenerateRandom(u8 *buf, int size) {
 	if (ReadFile("/dev/urandom", buf, size) != size) {
 		int i;
 
-		for (i = 0; i < 0x10; i++) {
+		for (i = 0; i < size; i++) {
 			buf[i] = (rand() & 0xFF);
 		}
 	}
@@ -185,7 +185,7 @@ int PspPack(u8 *in, int size, u8 *out, int pbp, int use_sce_header, int encrypt,
 		u32 psp_tag;
 
 		// ME TAG
-		if (tag == 0x4C94DAF0 || tag == 0x4C94ACF0) {
+		if (tag == 0x4C94DAF0 || tag == 0x4C94ACF0 || tag == 0x4C9494F0) {
 			oe_tag = 0xC6BA41D3;
 			psp_tag = tag;
 		}
