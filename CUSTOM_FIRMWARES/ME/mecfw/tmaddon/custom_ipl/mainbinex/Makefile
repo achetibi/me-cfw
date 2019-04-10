@@ -1,10 +1,11 @@
 PSPDEV=$(shell psp-config --pspsdk-path)
 INCLUDES=-I $(PSPDEV)/include
+DATADIR=../../installer/data
 
-ifeq ($(PSP_MODEL),1)
-TARGET = patch_02g
+ifeq ($(PSP_MODEL), 0)
+TARGET = ipl_01g
 else
-TARGET = patch_01g
+TARGET = ipl_02g
 endif
 
 ifndef $(TARGET_FW)
@@ -21,9 +22,12 @@ a.bin:
 	psp-ld -T linkfile.l main.o -o main.elf
 	psp-strip -s main.elf
 	psp-objcopy -O binary main.elf $(TARGET).bin
+	bin2c $(TARGET).bin $(DATADIR)/$(TARGET)_bin.h $(TARGET)
+	sed -i "/int/d" $(DATADIR)/$(TARGET)_bin.h
+	rm -rf *~ *.o *.elf *.s *.bin
 
 clean: reset
-	rm -f patch_0?g.bin
+	rm -f ipl_0?g.bin $(DATADIR)/ipl_0?g_bin.h
 
 
 reset:

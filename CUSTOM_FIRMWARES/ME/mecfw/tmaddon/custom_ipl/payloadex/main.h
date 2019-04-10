@@ -10,8 +10,57 @@
 #define MIPS_ADDU(RD,RS,RT) (0x00000021|(RD<<11)|(RT<<16)|(RS<<21))
 */
 
-#include "../../../minimum_edition/include/inline.h"
+#include "../../../include/inline.h"
+#include "fat_lib/hostemu.h"
 
+#if _PSP_FW_VERSION == 660
+#define BASE_PATH "TM/660"
+#define TMCTRL_PATH "/tmctrl660.prx"
+
+#if PSP_MODEL == 0
+#include "../recovery_btcnf_01g.h"
+#define BTCNF_PATH "pspbtcnf.bin"
+#define MS_MOUNT_PATCH_ADDR	0x88603FC0
+#define SIGCHECK_PATCH_ADDR	0x88600B48
+
+#elif PSP_MODEL == 1
+#include "../recovery_btcnf_02g.h"
+#define BTCNF_PATH "pspbtcnf_02g.bin"
+#define MS_MOUNT_PATCH_ADDR	0x88604088
+#define SIGCHECK_PATCH_ADDR	0x88600BD8
+
+#else
+#error PSP_MODEL is not defined
+#endif
+
+#elif _PSP_FW_VERSION == 661
+#define BASE_PATH "TM/661"
+#define TMCTRL_PATH "/tmctrl661.prx"
+
+#if PSP_MODEL == 0
+#include "../recovery_btcnf_01g.h"
+#define BTCNF_PATH "pspbtcnf.bin"
+#define MS_MOUNT_PATCH_ADDR	0x88603FC0
+#define SIGCHECK_PATCH_ADDR	0x88600B48
+
+#elif PSP_MODEL == 1
+#include "../recovery_btcnf_02g.h"
+#define BTCNF_PATH "pspbtcnf_02g.bin"
+#define MS_MOUNT_PATCH_ADDR	0x88604088
+#define SIGCHECK_PATCH_ADDR	0x88600BD8
+
+#else
+#error PSP_MODEL is not defined
+#endif
+
+#else
+#error devkit_ver
+#endif
+
+
+#define SYSCON_CTRL_LTRG      0x00000200
+#define SYSCON_CTRL_RTRG      0x00000400
+#define SYSCON_CTRL_HOME      0x00001000
 
 typedef struct
 {

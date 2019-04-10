@@ -7,7 +7,7 @@
 #include <pspsdk.h>
 #include "main.h"
 
-#include "../../../minimum_edition/custom_ipl/payloadex/payloadex_patch_addr.h"
+#include "../../../custom_ipl/payloadex/payloadex_patch_addr.h"
 
 int Main(void *, void *, void *, void *, void *, void *, void *);
 
@@ -30,21 +30,7 @@ int (* sceKernelCheckExecFile)(void *buf, int *check) =NULL;
 int (* memlmd_E42AFE2E)(void *buf ,int size , void *s) = NULL;
 int (* memlmd_3F2AC9C6)(void *a0, int size ) = NULL;
 
-#if PSP_MODEL == 0
-//fat
-#include "../recovery_btcnf_01g.h"
-#define BTCNF_PATH "pspbtcnf.bin"
-#define MS_MOUNT_PATCH_ADDR	0x88603FC0
-#define SIGCHECK_PATCH_ADDR	0x88600B48
-#elif PSP_MODEL == 1
-//slim
-#include "../recovery_btcnf_02g.h"
-#define BTCNF_PATH "pspbtcnf_02g.bin"
-#define MS_MOUNT_PATCH_ADDR	0x88604088
-#define SIGCHECK_PATCH_ADDR	0x88600BD8
-#else
-#error PSP_MODEL is not defined
-#endif
+
 
 
 static void ClearCaches()
@@ -149,7 +135,7 @@ int strcmp(const char *s1, const char *s2)
 char *strcpy(char *s1, const char *s2)
 {
     char *p = s1;
-    while (*s1++ = *s2++ ){}
+    while ((*s1++ = *s2++)){}
     return (p);
 }
 
@@ -178,10 +164,7 @@ ldiv_t ldiv(long numer, long denom)
   return result;
 }
 
-
-
 static char path_buffer[128];
-#define BASE_PATH "TM/660"
 
 static int sceBootLfatOpen(const char *path)
 {
@@ -208,7 +191,7 @@ static int sceBootLfatClose(void)
 
 int sceBootLfatfsMountPatch(int a0 , int a1 , int a2)
 {
-	a0 = a0;a1 = a1;a2 = a2;
+	a0 = a0; a1 = a1; a2 = a2;
 	
 //	int (* sceBootLfatfsMount)() = (void *)0x886049E8;
 //	sceBootLfatfsMount( a0 , a1 , a2);
@@ -229,7 +212,7 @@ int sceBootLfatOpenPatched(char *path)
 	}
 	else if( strcmp("/kd/lfatfs.prx", path) == 0 )
 	{
-		path = "/tmctrl660.prx";
+		path = TMCTRL_PATH;
 	}
 
 	return sceBootLfatOpen( path );
@@ -312,10 +295,10 @@ int memlmd_3F2AC9C6_patched(void *a0,int size)
 	PSP_Header *head=(PSP_Header *)a0;
 	int i;
 
-#if _PSP_FW_VERSION == 639
-	for(i=0;i<0x38;i++)
-#else
+#if _PSP_FW_VERSION == 660 || _PSP_FW_VERSION == 661
 	for(i=0;i<0x30;i++)
+#else
+	for(i=0;i<0x38;i++)
 #endif
 	{
 		if(head->scheck[i] != 0)
@@ -341,10 +324,6 @@ int PatchLoadCore(void *a0, void *a1, void *a2, int (* module_start)(void *, voi
 	ClearCaches();
 	return module_start(a0, a1, a2);
 }
-
-#define SYSCON_CTRL_LTRG      0x00000200
-#define SYSCON_CTRL_RTRG      0x00000400
-#define SYSCON_CTRL_HOME      0x00001000
 
 int Main(void *a0, void *a1, void *a2, void *a3, void *t0, void *t1, void *t2)
 {	

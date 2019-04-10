@@ -14,6 +14,8 @@
 //#include "hostemu.h"
 #include "dosfs.h"
 
+int DFS_HostReadSector(uint8_t *buffer, uint32_t sector, uint32_t count);
+
 #define DFS_ReadSector(unit,buffer,sector,count) DFS_HostReadSector(buffer,sector,count)
 #define DFS_WriteSector(unit,buffer,sector,count) DFS_HostWriteSector(buffer,sector,count)
 
@@ -414,7 +416,7 @@ typedef struct {
 char LFN_buff[128];
 int cache_flag = 0;
 
-int wcharcpy(char *str , const char *origin , int size )
+char *wcharcpy(char *str , const char *origin , int size )
 {
 	char *ret = str;
 	while( size-- )

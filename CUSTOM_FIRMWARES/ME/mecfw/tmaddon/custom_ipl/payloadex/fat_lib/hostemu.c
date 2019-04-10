@@ -10,6 +10,7 @@
 
 #include "dosfs.h"
 #include "hostemu.h"
+#include "memstkro.h"
 
 //===================================================================
 // Globals
@@ -98,7 +99,7 @@ int init_ms()
 
 int open_ms_file(const char *path )
 {
-	if (DFS_OpenFile(&vi,  path , DFS_READ, sector, &fi))
+	if (DFS_OpenFile(&vi,  (uint8_t *)path , DFS_READ, sector, &fi))
 	{
 //		printf("error opening file\n");
 		return -1;

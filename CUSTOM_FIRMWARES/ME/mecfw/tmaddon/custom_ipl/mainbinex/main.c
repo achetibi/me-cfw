@@ -6,7 +6,7 @@
 
 #include <pspsdk.h>
 #include "main.h"
-#include "../../../minimum_edition/custom_ipl/mainbinex/patch_addr.h"
+#include "../../../custom_ipl/mainbinex/patch_addr.h"
 
 #if PSP_MODEL == 0
 //fat
@@ -74,7 +74,7 @@ void patch_main_bin(void)
 
 #if PSP_MODEL == 1
 
-#include "../../../minimum_edition/custom_ipl/mainbinex/seedkey.h"
+#include "../../../custom_ipl/mainbinex/seedkey.h"
 void seed_patch()
 {
 	void (* back)() = (void *)0x04000000 + SEEDKEY_RETURN_ADDR;
