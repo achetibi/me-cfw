@@ -34,5 +34,13 @@ int DFS_HostReadSector(uint8_t *buffer, uint32_t sector, uint32_t count);
 */
 int DFS_HostWriteSector(uint8_t *buffer, uint32_t sector, uint32_t count);
 
+/*
+    MS I/O related functions
+ */
+int init_ms();
+int open_ms_file(const char *path);
+int read_ms_file(void *buff , int max_size);
+int close_ms_file();
+
 
 #endif // _HOSTEMU_H

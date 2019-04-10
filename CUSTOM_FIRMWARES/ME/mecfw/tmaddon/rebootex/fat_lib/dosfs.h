@@ -366,6 +366,8 @@ void DFS_Seek(PFILEINFO fileinfo, uint32_t offset, uint8_t *scratch);
 */
 uint32_t DFS_UnlinkFile(PVOLINFO volinfo, uint8_t *path, uint8_t *scratch);
 
+int DFS_HostReadSector(uint8_t *buffer, uint32_t sector, uint32_t count);
+
 // If we are building a host-emulation version, include host support
 #ifdef HOSTVER
 #include "hostemu.h"

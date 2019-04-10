@@ -149,7 +149,8 @@ if( (i%0x20) ==0x1c) Kprintf("\n");
 
 /****************************************************************************
 ****************************************************************************/
-static int ms_get_reg(void *buffer, int reg){
+static int ms_get_reg(void *buffer, int reg)
+{
   int ret;
 
 //Kprintf("READ_REG\n");

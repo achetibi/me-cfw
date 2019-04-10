@@ -1,5 +1,6 @@
 #include "inline.h"
 
+
 #define JAL_OPCODE	0x0C000000
 #define J_OPCODE	0x08000000
 #define MIPS_ADDI(RT,RS,IMM)    (0x24000000|(RS<<21)|(RT<<16)|((u32)(IMM)&0xffff))

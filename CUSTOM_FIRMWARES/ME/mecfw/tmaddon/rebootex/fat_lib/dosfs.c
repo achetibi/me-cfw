@@ -414,7 +414,7 @@ typedef struct {
 char LFN_buff[128];
 int cache_flag = 0;
 
-int wcharcpy(char *str , const char *origin , int size )
+char *wcharcpy(char *str , const char *origin , int size )
 {
 	char *ret = str;
 	while( size-- )

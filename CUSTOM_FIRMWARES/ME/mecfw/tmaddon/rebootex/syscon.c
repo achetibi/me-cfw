@@ -56,7 +56,7 @@ int Syscon_cmd(u8 *tx_buf,u8 *rx_buf)
 	u16 wdata;
 	u8 bdata;
 	int cnt;
-	u8 sum;
+	u8 sum, sum_mask;
 	int i;
 
 // Kprintf("SYSCON CMD %02X,%02X\n",tx_buf[0],tx_buf[1]);
@@ -221,7 +221,8 @@ retry:
 			for(i=0;i<cnt;i++)
 				sum += *ptr++;
 
-			if( (sum^0xff) != rx_buf[cnt])
+            sum_mask = sum^0xff;
+			if( sum_mask != rx_buf[cnt])
 			{
 //Kprintf("SYSCON sum error %02X %02X\n",(sum^0xff),rx_buf[cnt]);
 				result = -2; // check sum error

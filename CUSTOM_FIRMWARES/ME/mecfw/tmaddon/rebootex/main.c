@@ -8,8 +8,14 @@
 #include <rebootex_config.h>
 
 #include "main.h"
+#include "syscon.h"
+#include "fat_lib/hostemu.h"
 
-#include "../../minimum_edition/rebootex/rebootex_patch_addr.h"
+#include "../../rebootex/rebootex_patch_addr.h"
+
+
+
+
 
 int Main(void *, void *, void *, void *, void *, void *, void *);
 int Reboot_Entry(void *a0, void *a1, void *a2, void *a3, void *t0, void *t1, void *t2) __attribute__ ((section (".text.start")));
@@ -118,7 +124,6 @@ void* memset(void *dst, u8 code, int size)
 	return p1;
 }
 
-
 int strlen(char *str)
 {
 	char *p;
@@ -144,7 +149,7 @@ char *strncpy(char *s1, const char *s2, int n)
 char *strcpy(char *s1, const char *s2)
 {
     char *p = s1;
-    while (*s1++ = *s2++ ){}
+    while ((*s1++ = *s2++)){}
     return (p);
 }
 
@@ -192,10 +197,10 @@ static int sceBootLfatClose(void)
 	return 0;
 }
 
-static inline int pspSysconCtrlMsPower(u8 sw)
+/*static inline int pspSysconCtrlMsPower(u8 sw)
 {
 	return pspSyscon_tx_dword(sw,0x4c,3);
-}
+}*/
 
 int sceBootLfatfsMountPatch(int a0 , int a1 , int a2)
 {
