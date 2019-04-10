@@ -53,13 +53,30 @@ int WriteFile(char *file, void *buf, int size) {
 	return wt;
 }
 
-void GenerateRandom(u8 *buf, int size) {
-	if (ReadFile("/dev/urandom", buf, size) != size) {
-		int i;
+char* GenerateRandomBinName(int size) {
+	int i;
+	const char chars[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	char *buf = malloc((size + 1 + 4 + 1) * sizeof(char));
 
-		for (i = 0; i < size; i++) {
-			buf[i] = (rand() & 0xFF);
-		}
+	srand(time(NULL));
+
+	strncpy(buf, "_", 1);
+	
+	for (i = 1; i < size; i++) {
+		buf[i] = chars[rand() % strlen(chars)];
+	}
+
+	strncpy(buf+size, ".bin", 4);
+	buf[size + 4] = '\0';
+
+	return buf;
+}
+
+void GenerateRandom(u8 *buf, int size) {
+	int i;
+
+	for (i = 0; i < size; i++) {
+		buf[i] = (rand() & 0xFF);
 	}
 }
 
@@ -107,6 +124,7 @@ int PspPack(u8 *in, int size, u8 *out, int pbp, int use_sce_header, int encrypt,
 	Elf32_Phdr *segments;
 	Elf32_Shdr *sections;
 	char *strtab;
+	char *bin_name;
 	PspModuleInfo *modinfo;
 	int i;
 
@@ -271,7 +289,8 @@ int PspPack(u8 *in, int size, u8 *out, int pbp, int use_sce_header, int encrypt,
 	GenerateRandom((u8 *)&header.key_data2, 4);
 	GenerateRandom(header.key_data3, 0x1C);
 
-	gzFile comp = gzopen("temp.bin", "wb");
+	bin_name = GenerateRandomBinName(8);
+	gzFile comp = gzopen(bin_name, "wb");
 	if (!comp) {
 		printf("Cannot create temp file.\n");
 		return -1;
@@ -283,8 +302,14 @@ int PspPack(u8 *in, int size, u8 *out, int pbp, int use_sce_header, int encrypt,
 	}
 
 	gzclose(comp);
+	free(in);
 
-	header.comp_size = ReadFile("temp.bin", in, SIZE_BUFFER);
+	if (!(in = malloc(SIZE_BUFFER))) {
+		printf("Cannot reallocate memory for temp buffer.\n");
+		return -1;
+	}
+
+	header.comp_size = ReadFile(bin_name, in, SIZE_BUFFER);
 
 	if (encrypt != 0) {
 		GenerateRandom(header.scheck+0x38, 0x20);
@@ -297,7 +322,7 @@ int PspPack(u8 *in, int size, u8 *out, int pbp, int use_sce_header, int encrypt,
 		out += 0x40;
 	}
 
-	remove("temp.bin");
+	remove(bin_name);
 
 	header.psp_size = header.comp_size + 0x150;
 
@@ -334,6 +359,7 @@ int main(int argc, char *argv[]) {
 	u32 devkit = 0;
 	char *input = NULL;
 	char *output = NULL;
+	char *bin_name;
 
 	if (argc == 1 || (argc < 2 || argc > 11)) {
 		do_help();
@@ -529,13 +555,15 @@ int main(int argc, char *argv[]) {
 			printf("Unknown file type: 0x%08X\n", magic[0]);
 			res = -1;
 		}
+		
+		bin_name = GenerateRandomBinName(8);
 
-		if (WriteFile("temp.gz", src, size_psp) != size_psp) {
-			printf("Error writing file %s.\n", "temp.gz");
+		if (WriteFile(bin_name, src, size_psp) != size_psp) {
+			printf("Error writing file %s.\n", bin_name);
 			res = -1;
 		}
 
-		gzFile file = gzopen("temp.gz", "rb");
+		gzFile file = gzopen(bin_name, "rb");
 		if (file == NULL) {
 			printf("Cannot open compressed temp file.\n");
 			return -1;
@@ -550,7 +578,7 @@ int main(int argc, char *argv[]) {
 		}
 
 		gzclose(file);
-		remove("temp.gz");
+		remove(bin_name);
 
 		if (WriteFile(output, dst, size_elf) < 0) {
 			printf("Error writing file %s.\n", output);
