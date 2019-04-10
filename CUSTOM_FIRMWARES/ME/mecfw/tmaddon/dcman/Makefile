@@ -1,18 +1,19 @@
 release: all
     #psp-build-exports -s $(PRX_EXPORTS)
 	psp-packer -x -d $(PSP_FW_VERSION) -i $(TARGET).prx
-	bin2c $(TARGET).prx ../installer/data/$(TARGET)_bin.h $(TARGET)
-	sed -i "/int/d" ../installer/data/$(TARGET)_bin.h
-	rm -f *.elf *.o sfiles/*.o
+	bin2c $(TARGET).prx $(DATADIR)/$(TARGET)_bin.h $(TARGET)
+	sed -i "/int/d" $(DATADIR)/$(TARGET)_bin.h
+	rm -f *.elf *.o *.prx sfiles/*.o
 
 clean: reset
 reset:
-	rm -f *.elf *.o sfiles/*.o $(TARGET).prx ../installer/data/$(TARGET)_bin.h
+	rm -f *.elf *.o sfiles/*.o $(TARGET).prx $(DATADIR)/$(TARGET)_bin.h
 
 TARGET = dcman
 OBJS = main.o exports.o sfiles/stubs.o
 
 INCDIR = ../../include
+DATADIR=../installer/data
 CFLAGS = -Os -G0 -Wall -fshort-wchar -fno-pic -mno-check-zero-division 
 CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti
 ASFLAGS = $(CFLAGS)
