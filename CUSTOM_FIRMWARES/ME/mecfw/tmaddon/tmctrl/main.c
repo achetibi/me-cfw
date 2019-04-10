@@ -1,7 +1,8 @@
 #include <pspsdk.h>
 #include <pspkernel.h>
-#include <pspsysmem.h>
-#include <psploadcore.h>
+#include <pspthreadman_kernel.h>
+#include <pspsysmem_kernel.h>
+#include <psputilsforkernel.h>
 #include <string.h>
 
 #include "systemctrl_m33.h"
@@ -9,6 +10,9 @@
 
 #include "../rebootex/rebootex_01g.h"
 #include "../rebootex/rebootex_02g.h"
+
+void printf (const char *fmt, ...);
+void FlashEmu_D780E25C();
 
 PSP_MODULE_INFO("TimeMachine_Control", 0x1007 , 1, 0);
 STMOD_HANDLER previous = NULL;
@@ -63,7 +67,7 @@ int sub_00000854()
 			sceIoClose( id );
 			open_info[ i ].resume = 1;
 			ret = 0;
-			printf("ms_backup done %s\n", open_info[i].filename );
+            printf("ms_backup done %s\n", open_info[i].filename );
 			break;
 		}
 	}
@@ -82,7 +86,7 @@ int msfatOpenPatch( int type, void(* cb)(void *) , OpenParams *open_params)
 	{
 		if( open_params->file && memcmp( open_params->file + 4 , dc_path , sizeof(dc_path) - sizeof(wchar_t)  ) != 0 )
 		{
-			ret = sceKernelExtendKernelStack(  0x4000 , sub_00000854 , NULL );
+			ret = sceKernelExtendKernelStack(  0x4000 , (void *)sub_00000854 , NULL );
 			if( ret < 0)
 			{
 				break;
@@ -99,7 +103,7 @@ int msfatDopenPatch( int 	type, void(* cb)(void *) , DopenParams *dopen_params)
 	{
 		if( dopen_params->dirname	&& memcmp( dopen_params->dirname + 4 , dc_path , sizeof(dc_path) - sizeof(wchar_t)  ) != 0 )
 		{
-			ret = sceKernelExtendKernelStack(  0x4000 , sub_00000854 , NULL );
+			ret = sceKernelExtendKernelStack(  0x4000 , (void *)sub_00000854 , NULL );
 			if( ret < 0)
 			{
 				break;
@@ -115,7 +119,7 @@ int msfatDevctlPatch( int 	type, void(* cb )(void *) , void *buff)
 
 	while( ( ret = sceKernelExtendKernelStack( type , cb , buff  ) ) == 0x80010018 )
 	{
-		ret = sceKernelExtendKernelStack(  0x4000 , sub_00000854 , NULL );
+		ret = sceKernelExtendKernelStack(  0x4000 , (void *)sub_00000854 , NULL );
 		if( ret <  0)
 		{
 			break;
@@ -131,7 +135,7 @@ SceUID sceIoOpenPatched(const char *file, int flags, SceMode mode)
 //	if( sceKernelFindModuleByName("sceInit") == NULL )
 	if( sceKernelFindModuleByName("vsh_module") != NULL )
 	{
-		printf("codepage load\n");
+        printf("codepage load\n");
 		return sceIoOpen( file, flags, mode);
 	}
 
@@ -142,10 +146,16 @@ SceUID sceIoOpenPatched(const char *file, int flags, SceMode mode)
 #define MSFAT_OPEN_PATCH_ADDR		0x000030FC
 #define MSFAT_DOPEN_PATCH_ADDR		0x00003BA4
 #define MSFAT_DEVCTL_PATCH_ADDR		0x000044CC
+#define SIGCHECK_PATCH_ADDR         0x00005994
+#define SIGCHECK_FUNC_ADDR          0x00007824
+
 #elif _PSP_FW_VERSION == 661
 #define MSFAT_OPEN_PATCH_ADDR		0x000030FC
 #define MSFAT_DOPEN_PATCH_ADDR		0x00003BA4
 #define MSFAT_DEVCTL_PATCH_ADDR		0x000044CC
+#define SIGCHECK_PATCH_ADDR         0x00005994
+#define SIGCHECK_FUNC_ADDR          0x00007824
+
 #else
 #error devkit_ver
 #endif
@@ -156,7 +166,7 @@ int ApplyPatch(SceModule2 *mod)
 	u32 text_addr = mod->text_addr;
 	char *modinfo=mod->modname;
 
-	printf("%s \n", modinfo);
+    printf("%s \n", modinfo);
 
 //	if (strcmp(modinfo, "sceMediaSync") == 0) 
 	if (strcmp(modinfo, "sceUtility_Driver") == 0) 
@@ -234,8 +244,7 @@ static void fix_sigcheck()
 {
 	SceModule2 *mod = sceKernelFindModuleByName("sceLoaderCore");
 	u32 text_addr = mod->text_addr;
-	MAKE_CALL( text_addr + 0x00005994, text_addr + 0x00007824 );
-
+	MAKE_CALL( text_addr + SIGCHECK_PATCH_ADDR, text_addr + SIGCHECK_FUNC_ADDR );
 }
 
 int module_start(SceSize args, void *argp)

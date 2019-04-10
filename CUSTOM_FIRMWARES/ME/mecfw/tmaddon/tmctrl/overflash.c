@@ -1,3 +1,4 @@
+#include <pspthreadman_kernel.h>
 
 int loc_0000028C()
 {
@@ -11,7 +12,7 @@ int loc_00000294()
 
 int loc_0000029(int a0 , int a1 , int a2)
 {
-	return (a2)? 0x80010086: 0x80010016;
+	return (a2) ? 0x80010086 : 0x80010016;
 }
 
 PspIoDrvFuncs lflash_func  =
@@ -380,7 +381,7 @@ int flashfat_devctl(PspIoDrvFileArg *arg, const char *devname, unsigned int cmd,
 		return 0x80010016;
 	}
 
-	u32 buff = cmd;
+	//u32 buff = cmd;
 	printf("unk devctl: 0x%08X\n", cmd);
 //	WriteFile("fatms0:/unk_devctl.bin", &buff , sizeof(int) );
 //	WriteFile("ms0:/unk_devctl.bin", "aaa" , sizeof(int) );
@@ -417,7 +418,7 @@ PspIoDrvFuncs flashfat_func =
 	flashfat_open,//loc_00000640
 	flashfat_close,//loc_00000700
 	flashfat_read,//loc_0000060C
-	flashfat_write,//loc_000005D8
+    (void *)flashfat_write,//loc_000005D8
 	(void *)flashfat_lseek,//loc_000005A0
 	flashfat_ioctl,//loc_00000A48
 

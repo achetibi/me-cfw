@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <pspsysevent.h>
-
+#include <pspiofilemgr_kernel.h>
 
 #include "systemctrl_m33.h"
 #include "tmctrl.h"
@@ -14,9 +14,6 @@ int wait_ms_flag = 1;//data4B68
 SceUID flashfat_sema = 0;	//data69B0
 
 OpenInfo open_info[32];//data4DB0
-
-
-#define MS_PATH "ms0:/TM/"DEVKIT_VER_STR
 
 //sub_00000D68
 void wait_ms()

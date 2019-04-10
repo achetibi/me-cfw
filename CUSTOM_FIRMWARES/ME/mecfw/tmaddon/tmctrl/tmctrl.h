@@ -18,13 +18,16 @@
 #define MAKE_DUMMY_FUNCTION0(a) _sw(0x03e00008, a); _sw(0x00001021, a+4);
 #define MAKE_DUMMY_FUNCTION1(a) _sw(0x03e00008, a); _sw(0x24020001, a+4);
 
-
 #if _PSP_FW_VERSION == 660
 #define DEVKIT_VER 0x06060010
 #define DEVKIT_VER_STR "660"
+#define MS_PATH "ms0:/TM/660"
+
 #elif _PSP_FW_VERSION == 661
 #define DEVKIT_VER 0x06060110
 #define DEVKIT_VER_STR "661"
+#define MS_PATH "ms0:/TM/661"
+
 #else
 #error devkit_ver
 #endif
